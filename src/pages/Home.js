@@ -1,8 +1,10 @@
+import Sidebar from "components/Sidebar";
+
 function Home() {
   return (
-    <div className="bg-gray-800">
-      test
-    </div>
+    <>
+      <Sidebar />
+    </>
   );
 }
 
