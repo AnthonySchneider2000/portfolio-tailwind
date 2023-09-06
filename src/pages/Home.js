@@ -1,4 +1,4 @@
-function App() {
+function Home() {
   return (
     <div className="bg-gray-800">
       test
@@ -6,4 +6,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
