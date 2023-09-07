@@ -1,4 +1,4 @@
-import Sidebar from "components/Sidebar";
+import SidebarDesktop from "components/Sidebar/SidebarDesktop";
 import PortfolioItem from "components/PortfolioItem";
 import { sidebarWidth } from "utils/constants";
 
@@ -28,16 +28,16 @@ const PortfolioItemContainer = () => {
 };
 //TODO: make sidebarWidth a variable, possibly controlled by useState, so that it can be changed by the user
 // maybe use emotion for variable css
-function Home() {
+function DesktopHome() {
   return (
     <div
       className="pageContainer"
       style={{ "--sidebar-width": sidebarWidth }} // Use the imported variable in inline style
     >
-      <Sidebar />
+      <SidebarDesktop />
       <PortfolioItemContainer />
     </div>
   );
 }
 
-export default Home;
+export default DesktopHome;

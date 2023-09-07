@@ -8,6 +8,7 @@
 }
 @layer components{
 
+/* ------------------ UNIVERSAL STYLES ------------------ */
     /* UTILS */
 
 
@@ -75,4 +76,14 @@
         /* LEFT IS SIDEBAR WIDTH + PAGE PADDING */
         padding: var(--page-padding) var(--page-padding) var(--page-padding) calc(var(--sidebar-width) + var(--page-padding) + var(--page-padding)); /* FORMAT IS TOP RIGHT BOTTOM LEFT */
     }
+
+
+/* ------------------ DESKTOP STYLES ------------------ */
+
+
+
+/* ------------------ MOBILE STYLES ------------------ */
+
+
+
 }
