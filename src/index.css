@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .iconBackground{
+        @apply bg-slate-600 hover:bg-slate-700;
+    }
+    .iconTextStyle{
+        @apply text-white font-bold hover:text-slate-400;
+    }
+    .iconTransition{
+        @apply transition duration-300 ease-in-out;
+    }
+}
