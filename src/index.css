@@ -52,6 +52,13 @@
         gap: var(--page-padding);
         padding: var(--page-padding);
     }
+
+    /* PORTFOLIO ITEM STYLES */
+    .portfolioItem{
+        @apply rounded-3xl iconBackground iconTransition p-4;
+        height: 100%;
+        aspect-ratio: 1;
+    }
  
     /* PAGE CONTAINER STYLES */
     .pageContainer{

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function PortfolioItem({ title, description, image, link }) {
   return (
-    <div className="rounded-3xl h-40 w-40 iconBackground iconTransition">
+    <div className="portfolioItem">
       <a
         href={link}
         target="_blank"
