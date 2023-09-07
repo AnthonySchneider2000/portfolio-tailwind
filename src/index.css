@@ -3,7 +3,7 @@
 @tailwind utilities;
 :root {
     --sidebar-width: 5rem;
-    --sidebar-item-size: calc(var(--sidebar-width) - 1rem);
+    --sidebar-item-size: calc(var(--sidebar-width) * 0.8);
     --page-padding: 1rem;
 }
 @layer components{
@@ -28,9 +28,18 @@
         width: var(--sidebar-width);
     }
     .sidebarItem{
-        @apply flex justify-center items-center rounded-3xl text-2xl;
+        @apply flex justify-center items-center rounded-3xl;
         width: var(--sidebar-item-size);
         height: var(--sidebar-item-size);
+        font-size: calc(var(--sidebar-item-size) / 2);
+    }
+
+    /* PORTFOLIO ITEM CONTAINER */
+
+    .portfolioItemContainer{
+        @apply flex flex-row flex-wrap absolute top-4 gap-5;
+        /* LEFT IS SIDEBAR WITH + PAGE PADDING */
+        left: calc(var(--sidebar-width) + var(--page-padding) + var(--page-padding));
     }
     
 }

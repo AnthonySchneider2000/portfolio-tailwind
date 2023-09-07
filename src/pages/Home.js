@@ -3,9 +3,9 @@ import PortfolioItem from "components/PortfolioItem";
 
 function Home() {
   return (
-    <div className="bg-cyan-600 h-screen w-screen p-2 flex flex-col">
+    <div className="bg-cyan-600 h-screen w-screen flex flex-col">
       <Sidebar />
-      <div className="flex flex-row flex-wrap absolute left-28 top-4 gap-5">
+      <div className="portfolioItemContainer">
         <PortfolioItem
           title="AGSFlix"
           description="Test"
