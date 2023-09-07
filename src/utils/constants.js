@@ -15,7 +15,7 @@ export const portfolioItems = {
         image: "Test",
         link: "https://agsflix.vercel.app/"
     },
-    "Trail Tours": {
+    "TrailTours": {
         title: "Trail Tours",
         description: "Test",
         image: "Test",
@@ -28,3 +28,9 @@ export const portfolioItems = {
         link: "https://youtube-playlist-manager-ags.vercel.app/"
     }
 };
+
+// export agsflix
+
+export const AGSFlix = portfolioItems.AGSFlix;
+export const TrailTours = portfolioItems.TrailTours;
+export const Playlist = portfolioItems.Playlist;
