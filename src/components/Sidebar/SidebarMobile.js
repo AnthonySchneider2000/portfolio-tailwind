@@ -7,7 +7,7 @@ const Item = ({ children }) => {
 };
 
 
-const Sidebar = () => {
+const SidebarMobile = () => {
   return (
     <div
       className="sidebar"
@@ -20,4 +20,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default SidebarMobile;
