@@ -26,11 +26,11 @@ const PortfolioItemContainer = () => {
     </div>
   );
 };
-
+//TODO: make sidebarWidth a variable, possibly controlled by useState, so that it can be changed by the user
 function Home() {
   return (
     <div
-      className="bg-cyan-600 h-screen w-screen flex flex-col"
+      className="pageContainer"
       style={{ "--sidebar-width": sidebarWidth }} // Use the imported variable in inline style
     >
       <Sidebar />

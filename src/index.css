@@ -49,11 +49,15 @@
 
     .portfolioItemContainer{
         @apply flex flex-row flex-wrap;
-        /* LEFT IS SIDEBAR WITH + PAGE PADDING */
-        margin-left: calc(var(--sidebar-width) + var(--page-padding) + var(--page-padding));
-        /* TOP IS PAGE PADDING */
-        margin-top: var(--page-padding);
         gap: var(--page-padding);
     }
-    
+ 
+    /* PAGE CONTAINER STYLES */
+    .pageContainer{
+        @apply bg-cyan-600 h-screen w-screen flex flex-col;
+        /* LEFT IS SIDEBAR WIDTH + PAGE PADDING */
+        padding-left: calc(var(--sidebar-width) + var(--page-padding) + var(--page-padding));
+        /* TOP IS PAGE PADDING */
+        padding-top: var(--page-padding);
+    }
 }
