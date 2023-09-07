@@ -27,11 +27,12 @@
 
     /* SIDEBAR STYLES */
     .sidebar{
-        @apply fixed h-1/2 m-0
+        @apply fixed h-full m-0
         flex flex-col justify-evenly items-center
         bg-gray-900 sidebarRounding;
         top: var(--page-padding);
         left: var(--page-padding);
+        height: calc(100% - var(--page-padding) * 2);
         width: min(var(--sidebar-width), 25vw);
     }
     .sidebarItem{
@@ -84,6 +85,21 @@
 
 /* ------------------ MOBILE STYLES ------------------ */
 
+    .msidebar{
+        /* SIDEBAR ON TOP */
+        @apply fixed m-0
+        flex flex-row justify-evenly items-center
+        bg-gray-900 sidebarRounding;
+        top: var(--page-padding);
+        left: var(--page-padding);
+        width: calc(100% - var(--page-padding) * 2);
+        height: min(var(--sidebar-width), 25vw);
+    }
 
+    .mpageContainer{
+        @apply bg-cyan-600 h-screen w-screen flex flex-col;
+        /* TOP IS SIDEBAR WIDTH + PAGE PADDING */
+        padding: calc(var(--sidebar-width) + var(--page-padding) + var(--page-padding)) var(--page-padding) var(--page-padding) var(--page-padding); /* FORMAT IS TOP RIGHT BOTTOM LEFT */    
+    }
 
 }

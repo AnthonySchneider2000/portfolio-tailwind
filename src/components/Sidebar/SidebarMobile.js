@@ -10,7 +10,7 @@ const Item = ({ children }) => {
 const SidebarMobile = () => {
   return (
     <div
-      className="sidebar"
+      className="msidebar"
     >
         <Item>1</Item>
         <Item>2</Item>

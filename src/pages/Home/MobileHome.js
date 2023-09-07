@@ -1,4 +1,4 @@
-import Sidebar from "components/Sidebar/SidebarDesktop";
+import Sidebar from "components/Sidebar/SidebarMobile";
 import PortfolioItem from "components/PortfolioItem";
 import { sidebarWidth } from "utils/constants";
 
@@ -31,7 +31,7 @@ const PortfolioItemContainer = () => {
 function MobileHome() {
   return (
     <div
-      className="pageContainer"
+      className="mpageContainer"
       style={{ "--sidebar-width": sidebarWidth }} // Use the imported variable in inline style
     >
       <Sidebar />
