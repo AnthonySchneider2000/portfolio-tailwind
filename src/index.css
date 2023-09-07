@@ -48,16 +48,15 @@
     /* PORTFOLIO ITEM CONTAINER */
 
     .portfolioItemContainer{
-        @apply flex flex-row flex-wrap;
+        @apply flex flex-row flex-wrap bg-cyan-700 rounded-3xl justify-evenly;
         gap: var(--page-padding);
+        padding: var(--page-padding);
     }
  
     /* PAGE CONTAINER STYLES */
     .pageContainer{
         @apply bg-cyan-600 h-screen w-screen flex flex-col;
         /* LEFT IS SIDEBAR WIDTH + PAGE PADDING */
-        padding-left: calc(var(--sidebar-width) + var(--page-padding) + var(--page-padding));
-        /* TOP IS PAGE PADDING */
-        padding-top: var(--page-padding);
+        padding: var(--page-padding) var(--page-padding) var(--page-padding) calc(var(--sidebar-width) + var(--page-padding) + var(--page-padding)); /* FORMAT IS TOP RIGHT BOTTOM LEFT */
     }
 }
