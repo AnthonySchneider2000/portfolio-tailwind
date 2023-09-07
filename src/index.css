@@ -21,14 +21,13 @@
 
     /* SIDEBAR STYLES */
     .sidebar{
-        @apply fixed top-4 left-4 h-1/2 
+        @apply fixed top-4 left-4 h-1/2 m-0 pt-10
         flex flex-col justify-start items-center gap-4 
-        m-0 pt-10 
         shadow-2xl bg-gray-900 rounded-3xl;
         width: var(--sidebar-width);
     }
     .sidebarItem{
-        @apply flex justify-center items-center rounded-3xl;
+        @apply flex justify-center items-center rounded-3xl iconBackground iconTextStyle iconTransition;
         width: var(--sidebar-item-size);
         height: var(--sidebar-item-size);
         font-size: calc(var(--sidebar-item-size) / 2);

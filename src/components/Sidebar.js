@@ -1,6 +1,6 @@
 const Item = ({ children }) => {
     return (
-        <div className="sidebarItem iconBackground iconTextStyle iconTransition">
+        <div className="sidebarItem">
           {children}
         </div>
     );
