@@ -55,7 +55,8 @@
 
     /* PORTFOLIO ITEM STYLES */
     .portfolioItem{
-        @apply rounded-3xl iconBackground iconTransition p-4;
+        @apply rounded-3xl iconBackground iconTransition;
+        padding: 1vh;
         height: 100%;
         aspect-ratio: 1;
     }
