@@ -7,9 +7,7 @@ export default function PortfolioItem({ title, description, image, link }) {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="w-full h-full text-center rounded-3xl 
-        flex flex-col content-center justify-center 
-        text-3xl iconTextStyle iconTransition"
+        className="portfolioItemText"
       >
         {title}
       </a>

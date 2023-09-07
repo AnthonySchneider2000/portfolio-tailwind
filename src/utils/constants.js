@@ -1,1 +1,1 @@
-export const sidebarWidth = "5rem";
+export const sidebarWidth = "10vh";
