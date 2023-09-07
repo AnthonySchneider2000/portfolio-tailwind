@@ -1,0 +1,1 @@
+export const sidebarWidth = "10rem";

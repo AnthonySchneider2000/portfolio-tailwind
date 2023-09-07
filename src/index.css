@@ -35,9 +35,9 @@
     }
     .sidebarItem{
         @apply flex justify-center items-center sidebarRounding iconBackground iconTextStyle iconTransition;
-        width: var(--sidebar-item-size);
-        height: var(--sidebar-item-size);
-        font-size: calc(var(--sidebar-item-size) / 2);
+        width: calc(var(--sidebar-width) * 0.8);
+        height: calc(var(--sidebar-width) * 0.8);
+        font-size: calc(calc(var(--sidebar-width) * 0.8) / 2);
     }
 
     .sidebarRounding{
@@ -48,11 +48,11 @@
     /* PORTFOLIO ITEM CONTAINER */
 
     .portfolioItemContainer{
-        @apply flex flex-row flex-wrap absolute;
+        @apply flex flex-row flex-wrap;
         /* LEFT IS SIDEBAR WITH + PAGE PADDING */
-        left: calc(var(--sidebar-width) + var(--page-padding) + var(--page-padding));
+        margin-left: calc(var(--sidebar-width) + var(--page-padding) + var(--page-padding));
         /* TOP IS PAGE PADDING */
-        top: var(--page-padding);
+        margin-top: var(--page-padding);
         gap: var(--page-padding);
     }
     
