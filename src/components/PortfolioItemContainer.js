@@ -1,26 +1,21 @@
 import PortfolioItem from "components/PortfolioItem";
-
+import { portfolioItems } from "utils/constants";
 export const PortfolioItemContainer = () => {
     return (
       <div className="portfolioItemContainer">
-        <PortfolioItem
-          title="AGSFlix"
-          description="Test"
-          image="Test"
-          link="https://agsflix.vercel.app/"
-        />
-        <PortfolioItem
-          title="Trail Tours"
-          description="Test"
-          image="Test"
-          link="https://trail-tours.vercel.app/"
-        />
-        <PortfolioItem
-          title="Playlist"
-          description="Test"
-          image="Test"
-          link="https://youtube-playlist-manager-ags.vercel.app/"
-        />
+        {Object.keys(portfolioItems).map((key) => {
+          const { title, description, image, link } = portfolioItems[key];
+          return (
+            <PortfolioItem
+              key={key}
+              title={title}
+              description={description}
+              image={image}
+              link={link}
+            />
+          );
+        })}
+        
       </div>
     );
   };
