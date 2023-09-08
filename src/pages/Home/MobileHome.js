@@ -1,15 +1,13 @@
 import Sidebar from "components/Sidebar/SidebarMobile";
 import { PortfolioItemContainer } from "components/PortfolioItemContainer";
+import PortfolioDetailContainer from "components/PortfolioDetailContainer";
 
-//TODO: make sidebarWidth a variable, possibly controlled by useState, so that it can be changed by the user
-// maybe use emotion for variable css
 function MobileHome() {
   return (
-    <div
-      className="mpageContainer"
-    >
+    <div className="mpageContainer">
       <Sidebar />
       <PortfolioItemContainer />
+      <PortfolioDetailContainer />
     </div>
   );
 }

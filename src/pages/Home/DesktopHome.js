@@ -1,15 +1,13 @@
 import Sidebar from "components/Sidebar/SidebarDesktop";
 import { PortfolioItemContainer } from "components/PortfolioItemContainer";
+import PortfolioDetailContainer from "components/PortfolioDetailContainer";
 
-//TODO: make sidebarWidth a variable, possibly controlled by useState, so that it can be changed by the user
-// maybe use emotion for variable css
 function DesktopHome() {
   return (
-    <div
-      className="dpageContainer"
-    >
+    <div className="dpageContainer">
       <Sidebar />
       <PortfolioItemContainer />
+      <PortfolioDetailContainer />
     </div>
   );
 }
