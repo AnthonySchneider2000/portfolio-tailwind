@@ -29,46 +29,48 @@
     .sidebar{
         @apply fixed h-full m-0
         flex flex-col justify-evenly items-center
-        bg-gray-900 sidebarRounding;
+        bg-gray-900 consistentRounding;
         top: var(--page-padding);
         left: var(--page-padding);
         height: calc(100% - var(--page-padding) * 2);
         width: min(var(--sidebar-width), 25vw);
     }
     .sidebarItem{
-        @apply flex justify-center items-center sidebarRounding iconBackground iconTextStyle iconTransition;
+        @apply flex justify-center items-center consistentRounding iconBackground iconTextStyle iconTransition;
         width: min(calc(var(--sidebar-width) * 0.8), 20vw);
-        height: calc(var(--sidebar-width) * 0.8);
-        font-size: calc(calc(var(--sidebar-width) * 0.8) / 2);
+        height: min(calc(var(--sidebar-width) * 0.8), 20vw);
+        font-size: min(calc(var(--sidebar-width) * 0.7), 18vw); /* maybe change to 3vw) */
     }
 
-    .sidebarRounding{
-        @apply rounded-3xl;
-        /* border-radius: calc(var(--sidebar-width) / 10 * 3); */
+    .consistentRounding{
+        /* @apply rounded-3xl; */
+        border-radius: calc(var(--sidebar-width) / 10 * 2);
     }
 
     /* PORTFOLIO ITEM CONTAINER */
 
     .portfolioItemContainer{
-        @apply flex flex-row bg-cyan-700 rounded-3xl justify-evenly;
+        @apply flex flex-row bg-cyan-700 consistentRounding justify-evenly;
         gap: min(var(--page-padding), 5vw);
+        height: min(100%, 20vw);
+        max-height: 20vh;
         padding: var(--page-padding);
     }
 
     /* PORTFOLIO ITEM STYLES */
     .portfolioItem{
-        @apply rounded-3xl iconBackground iconTransition;
+        @apply consistentRounding iconBackground iconTransition;
         padding: 1vh;
         height: min(100%, 20vw);
         aspect-ratio: 1;
-        max-height: 30vw;
     }
 
     .portfolioItemText{
-        @apply w-full h-full text-center rounded-3xl 
+        @apply w-full h-full text-center consistentRounding 
         flex flex-col content-center justify-center 
         iconTextStyle iconTransition;
-        font-size: 2vh;
+        /* font size scales with container */
+        font-size: 200%;
     }
  
     /* PAGE CONTAINER STYLES */
@@ -89,7 +91,7 @@
         /* SIDEBAR ON TOP */
         @apply fixed m-0
         flex flex-row justify-evenly items-center
-        bg-gray-900 sidebarRounding;
+        bg-gray-900 consistentRounding;
         top: var(--page-padding);
         left: var(--page-padding);
         width: calc(100% - var(--page-padding) * 2);
