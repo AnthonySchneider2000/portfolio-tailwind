@@ -1,6 +1,5 @@
 import Sidebar from "components/Sidebar/SidebarDesktop";
 import PortfolioItem from "components/PortfolioItem";
-import { sidebarWidth } from "utils/constants";
 
 const PortfolioItemContainer = () => {
   return (
@@ -31,8 +30,7 @@ const PortfolioItemContainer = () => {
 function DesktopHome() {
   return (
     <div
-      className="pageContainer"
-      style={{ "--sidebar-width": sidebarWidth }} // Use the imported variable in inline style
+      className="dpageContainer"
     >
       <Sidebar />
       <PortfolioItemContainer />

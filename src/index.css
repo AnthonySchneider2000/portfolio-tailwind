@@ -29,18 +29,14 @@
   /* PORTFOLIO ITEM CONTAINER */
 
   .portfolioItemContainer {
-    @apply flex flex-row bg-cyan-700 consistentRounding justify-evenly;
-    gap: min(var(--page-padding), 5vw);
-    height: min(100%, 20vw);
-    max-height: 20vh;
-    padding: var(--page-padding);
+    @apply flex flex-row flex-wrap w-full bg-cyan-700 consistentRounding justify-evenly;
   }
 
   /* PORTFOLIO ITEM STYLES */
   .portfolioItem {
     @apply consistentRounding iconBackground iconTransition;
-    padding: 1vh;
-    height: min(100%, 20vw);
+    margin: var(--page-padding);
+    height: 12rem;
     aspect-ratio: 1;
   }
 
@@ -50,53 +46,52 @@
         iconTextStyle iconTransition;
     /* font size scales with container */
     font-size: 200%;
+    padding: 1rem;
   }
 
-  /* PAGE CONTAINER STYLES */
   .pageContainer {
     @apply bg-cyan-600 h-screen w-screen flex flex-col;
     /* LEFT IS SIDEBAR WIDTH + PAGE PADDING */
-    padding: var(--page-padding) var(--page-padding) var(--page-padding)
-      calc(var(--sidebar-size) + var(--page-padding) + var(--page-padding)); /* FORMAT IS TOP RIGHT BOTTOM LEFT */
+    padding: var(--page-padding);
   }
-
-  /* ------------------ DESKTOP STYLES ------------------ */
-
-  /* SIDEBAR STYLES */
   .sidebar {
-    @apply fixed h-full m-0
-            flex flex-col justify-evenly items-center
-            bg-gray-900 consistentRounding;
+    @apply fixed m-0
+    flex justify-evenly items-center
+    bg-gray-900 consistentRounding;
     top: var(--page-padding);
     left: var(--page-padding);
-    height: calc(100% - var(--page-padding) * 2);
-    width: var(--sidebar-size);
   }
   .sidebarItem {
     @apply flex justify-center items-center consistentRounding iconBackground iconTextStyle iconTransition;
     width: var(--sidebar-item-size);
     height: var(--sidebar-item-size);
     font-size: var(--sidebar-item-size);
-    
   }
 
+  /* ------------------ DESKTOP STYLES ------------------ */
+
+  /* SIDEBAR STYLES */
+  .dsidebar {
+    @apply sidebar flex-col;
+    height: calc(100% - var(--page-padding) * 2);
+    width: var(--sidebar-size);
+  }
+  /* PAGE CONTAINER STYLES */
+  .dpageContainer {
+    @apply pageContainer;
+    padding-left: calc(var(--sidebar-size) + var(--page-padding) * 2);
+  }
   /* ------------------ MOBILE STYLES ------------------ */
 
   .msidebar {
     /* SIDEBAR ON TOP */
-    @apply fixed m-0
-        flex flex-row justify-evenly items-center
-        bg-gray-900 consistentRounding;
-    top: var(--page-padding);
-    left: var(--page-padding);
+    @apply sidebar flex-row;
     width: calc(100% - var(--page-padding) * 2);
     height: var(--sidebar-size);
   }
 
   .mpageContainer {
-    @apply bg-cyan-600 h-screen w-screen flex flex-col;
-    /* TOP IS SIDEBAR WIDTH + PAGE PADDING */
-    padding: var(--page-padding);
+    @apply pageContainer;
     padding-top: calc(var(--sidebar-size) + var(--page-padding) * 2);
   }
 }

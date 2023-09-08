@@ -10,7 +10,7 @@ const Item = ({ children }) => {
 const SidebarDesktop = () => {
   return (
     <div
-      className="sidebar"
+      className="dsidebar"
     >
         <Item>1</Item>
         <Item>2</Item>
