@@ -37,7 +37,7 @@ html{
 
   /* PORTFOLIO ITEM STYLES */
   .portfolioItem {
-    @apply consistentRounding iconBackground iconTransition;
+    @apply consistentRounding iconTransition;
     margin: var(--page-padding);
     height: 12rem;
     aspect-ratio: 1;

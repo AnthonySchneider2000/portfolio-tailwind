@@ -7,15 +7,19 @@ export const useStateContext = () => {
 };
 
 export const StateContextProvider = ({ children }) => {
-    //store json about current State
-    const [projectSelected, setProjectSelected] = useState(false);
-    const [selectedProjectName, setSelectedProjectName] = useState("");
+  //store json about current State
+  const [projectSelected, setProjectSelected] = useState(false);
+  const [selectedProjectName, setSelectedProjectName] = useState("");
 
-    const selectProject = (projectName) => {
-        setProjectSelected(true);
-        setSelectedProjectName(projectName);
+  const selectProject = (projectName) => {
+    if (projectName === selectedProjectName) {
+      setProjectSelected(false);
+      setSelectedProjectName("");
+    } else {
+      setProjectSelected(true);
+      setSelectedProjectName(projectName);
     }
-
+  };
 
   // You can define more functions as needed to modify State data
 
