@@ -81,6 +81,9 @@
     @apply pageContainer;
     padding-left: calc(var(--sidebar-size) + var(--page-padding) * 2);
   }
+  .dsidebarItem{
+    @apply sidebarItem;
+  }
   /* ------------------ MOBILE STYLES ------------------ */
 
   .msidebar {
@@ -93,5 +96,8 @@
   .mpageContainer {
     @apply pageContainer;
     padding-top: calc(var(--sidebar-size) + var(--page-padding) * 2);
+  }
+  .msidebarItem{
+    @apply sidebarItem;
   }
 }
