@@ -2,106 +2,204 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-    --sidebar-width: 10vh;
-    --sidebar-item-size: calc(var(--sidebar-width) * 0.8);
-    --page-padding: 1rem;
+  --sidebar-size: 7rem;
+  --sidebar-item-size: calc(var(--sidebar-size) * 0.8);
+  --page-padding: 1rem;
 }
-@layer components{
+@layer components {
+  /* ------------------ UNIVERSAL STYLES ------------------ */
+  /* UTILS */
 
-/* ------------------ UNIVERSAL STYLES ------------------ */
-    /* UTILS */
+  /* ICON STYLES */
+  .dynamiciconBackground {
+    @apply bg-slate-600 hover:bg-slate-700;
+  }
+  .dynamiciconTextStyle {
+    @apply text-white font-bold hover:text-slate-400;
+  }
+  .dynamiciconTransition {
+    @apply transition duration-300 ease-in-out;
+  }
 
-
-
-
-    /* ICON STYLES */
-    .iconBackground{
-        @apply bg-slate-600 hover:bg-slate-700;
-    }
-    .iconTextStyle{
-        @apply text-white font-bold hover:text-slate-400;
-    }
-    .iconTransition{
-        @apply transition duration-300 ease-in-out;
-    }
-
-    /* SIDEBAR STYLES */
-    .sidebar{
-        @apply fixed h-full m-0
+  /* SIDEBAR STYLES */
+  .dynamicsidebar {
+    @apply fixed h-full m-0
         flex flex-col justify-evenly items-center
         bg-gray-900 consistentRounding;
-        top: var(--page-padding);
-        left: var(--page-padding);
-        height: calc(100% - var(--page-padding) * 2);
-        width: min(var(--sidebar-width), 25vw);
-    }
-    .sidebarItem{
-        @apply flex justify-center items-center consistentRounding iconBackground iconTextStyle iconTransition;
-        width: min(calc(var(--sidebar-width) * 0.8), 20vw);
-        height: min(calc(var(--sidebar-width) * 0.8), 20vw);
-        font-size: min(calc(var(--sidebar-width) * 0.7), 18vw); /* maybe change to 3vw) */
-    }
+    top: var(--page-padding);
+    left: var(--page-padding);
+    height: calc(100% - var(--page-padding) * 2);
+    width: min(var(--sidebar-size), 25vw);
+  }
+  .dynamicsidebarItem {
+    @apply flex justify-center items-center consistentRounding iconBackground iconTextStyle iconTransition;
+    width: min(calc(var(--sidebar-size) * 0.8), 20vw);
+    height: min(calc(var(--sidebar-size) * 0.8), 20vw);
+    font-size: min(
+      calc(var(--sidebar-size) * 0.7),
+      18vw
+    ); /* maybe change to 3vw) */
+  }
 
-    .consistentRounding{
-        /* @apply rounded-3xl; */
-        border-radius: calc(var(--sidebar-width) / 10 * 2);
-    }
+  .dynamicconsistentRounding {
+    /* @apply rounded-3xl; */
+    border-radius: calc(var(--sidebar-size) / 10 * 2);
+  }
 
-    /* PORTFOLIO ITEM CONTAINER */
+  /* PORTFOLIO ITEM CONTAINER */
 
-    .portfolioItemContainer{
-        @apply flex flex-row bg-cyan-700 consistentRounding justify-evenly;
-        gap: min(var(--page-padding), 5vw);
-        height: min(100%, 20vw);
-        max-height: 20vh;
-        padding: var(--page-padding);
-    }
+  .dynamicportfolioItemContainer {
+    @apply flex flex-row bg-cyan-700 consistentRounding justify-evenly;
+    gap: min(var(--page-padding), 5vw);
+    height: min(100%, 20vw);
+    max-height: 20vh;
+    padding: var(--page-padding);
+  }
 
-    /* PORTFOLIO ITEM STYLES */
-    .portfolioItem{
-        @apply consistentRounding iconBackground iconTransition;
-        padding: 1vh;
-        height: min(100%, 20vw);
-        aspect-ratio: 1;
-    }
+  /* PORTFOLIO ITEM STYLES */
+  .dynamicportfolioItem {
+    @apply consistentRounding iconBackground iconTransition;
+    padding: 1vh;
+    height: min(100%, 20vw);
+    aspect-ratio: 1;
+  }
 
-    .portfolioItemText{
-        @apply w-full h-full text-center consistentRounding 
+  .dynamicportfolioItemText {
+    @apply w-full h-full text-center consistentRounding 
         flex flex-col content-center justify-center 
         iconTextStyle iconTransition;
-        /* font size scales with container */
-        font-size: 200%;
-    }
- 
-    /* PAGE CONTAINER STYLES */
-    .pageContainer{
-        @apply bg-cyan-600 h-screen w-screen flex flex-col;
-        /* LEFT IS SIDEBAR WIDTH + PAGE PADDING */
-        padding: var(--page-padding) var(--page-padding) var(--page-padding) calc(var(--sidebar-width) + var(--page-padding) + var(--page-padding)); /* FORMAT IS TOP RIGHT BOTTOM LEFT */
-    }
+    /* font size scales with container */
+    font-size: 200%;
+  }
 
+  /* PAGE CONTAINER STYLES */
+  .dynamicpageContainer {
+    @apply bg-cyan-600 h-screen w-screen flex flex-col;
+    /* LEFT IS SIDEBAR WIDTH + PAGE PADDING */
+    padding: var(--page-padding) var(--page-padding) var(--page-padding)
+      calc(var(--sidebar-size) + var(--page-padding) + var(--page-padding)); /* FORMAT IS TOP RIGHT BOTTOM LEFT */
+  }
 
-/* ------------------ DESKTOP STYLES ------------------ */
+  /* ------------------ DESKTOP STYLES ------------------ */
 
+  /* ------------------ MOBILE STYLES ------------------ */
 
-
-/* ------------------ MOBILE STYLES ------------------ */
-
-    .msidebar{
-        /* SIDEBAR ON TOP */
-        @apply fixed m-0
+  .dynamicmsidebar {
+    /* SIDEBAR ON TOP */
+    @apply fixed m-0
         flex flex-row justify-evenly items-center
         bg-gray-900 consistentRounding;
-        top: var(--page-padding);
-        left: var(--page-padding);
-        width: calc(100% - var(--page-padding) * 2);
-        height: min(var(--sidebar-width), 25vw);
-    }
+    top: var(--page-padding);
+    left: var(--page-padding);
+    width: calc(100% - var(--page-padding) * 2);
+    height: min(var(--sidebar-size), 25vw);
+  }
 
-    .mpageContainer{
-        @apply bg-cyan-600 h-screen w-screen flex flex-col;
-        /* TOP IS SIDEBAR WIDTH + PAGE PADDING */
-        padding: calc(var(--sidebar-width) + var(--page-padding) + var(--page-padding)) var(--page-padding) var(--page-padding) var(--page-padding); /* FORMAT IS TOP RIGHT BOTTOM LEFT */    
-    }
+  .dynamicmpageContainer {
+    @apply bg-cyan-600 h-screen w-screen flex flex-col;
+    /* TOP IS SIDEBAR WIDTH + PAGE PADDING */
+    padding: calc(
+        var(--sidebar-size) + var(--page-padding) + var(--page-padding)
+      )
+      var(--page-padding) var(--page-padding) var(--page-padding); /* FORMAT IS TOP RIGHT BOTTOM LEFT */
+  }
 
+  /* THE ABOVE STYLES ARE NOW DEPRACATED */
+  /* IN ORDER TO USE THEM, REMOVE DYNAMIC FROM THEIR NAME */
+  /* AND REMOVE THE STYLES BELOW */
+
+  /* -------------------------------------------------------------------------- */
+
+  /* ------------------ UNIVERSAL STYLES ------------------ */
+  /* UTILS */
+
+  /* ICON STYLES */
+  .iconBackground {
+    @apply bg-slate-600 hover:bg-slate-700;
+  }
+  .iconTextStyle {
+    @apply text-white font-bold hover:text-slate-400;
+  }
+  .iconTransition {
+    @apply transition duration-300 ease-in-out;
+  }
+
+  .consistentRounding {
+    /* @apply rounded-3xl; */
+    border-radius: calc(var(--sidebar-size) / 10 * 2);
+  }
+
+  /* PORTFOLIO ITEM CONTAINER */
+
+  .portfolioItemContainer {
+    @apply flex flex-row bg-cyan-700 consistentRounding justify-evenly;
+    gap: min(var(--page-padding), 5vw);
+    height: min(100%, 20vw);
+    max-height: 20vh;
+    padding: var(--page-padding);
+  }
+
+  /* PORTFOLIO ITEM STYLES */
+  .portfolioItem {
+    @apply consistentRounding iconBackground iconTransition;
+    padding: 1vh;
+    height: min(100%, 20vw);
+    aspect-ratio: 1;
+  }
+
+  .portfolioItemText {
+    @apply w-full h-full text-center consistentRounding 
+        flex flex-col content-center justify-center 
+        iconTextStyle iconTransition;
+    /* font size scales with container */
+    font-size: 200%;
+  }
+
+  /* PAGE CONTAINER STYLES */
+  .pageContainer {
+    @apply bg-cyan-600 h-screen w-screen flex flex-col;
+    /* LEFT IS SIDEBAR WIDTH + PAGE PADDING */
+    padding: var(--page-padding) var(--page-padding) var(--page-padding)
+      calc(var(--sidebar-size) + var(--page-padding) + var(--page-padding)); /* FORMAT IS TOP RIGHT BOTTOM LEFT */
+  }
+
+  /* ------------------ DESKTOP STYLES ------------------ */
+
+  /* SIDEBAR STYLES */
+  .sidebar {
+    @apply fixed h-full m-0
+            flex flex-col justify-evenly items-center
+            bg-gray-900 consistentRounding;
+    top: var(--page-padding);
+    left: var(--page-padding);
+    height: calc(100% - var(--page-padding) * 2);
+    width: var(--sidebar-size);
+  }
+  .sidebarItem {
+    @apply flex justify-center items-center consistentRounding iconBackground iconTextStyle iconTransition;
+    width: var(--sidebar-item-size);
+    height: var(--sidebar-item-size);
+    font-size: var(--sidebar-item-size);
+    
+  }
+
+  /* ------------------ MOBILE STYLES ------------------ */
+
+  .msidebar {
+    /* SIDEBAR ON TOP */
+    @apply fixed m-0
+        flex flex-row justify-evenly items-center
+        bg-gray-900 consistentRounding;
+    top: var(--page-padding);
+    left: var(--page-padding);
+    width: calc(100% - var(--page-padding) * 2);
+    height: var(--sidebar-size);
+  }
+
+  .mpageContainer {
+    @apply bg-cyan-600 h-screen w-screen flex flex-col;
+    /* TOP IS SIDEBAR WIDTH + PAGE PADDING */
+    padding: var(--page-padding);
+    padding-top: calc(var(--sidebar-size) + var(--page-padding) * 2);
+  }
 }
