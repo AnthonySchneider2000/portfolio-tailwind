@@ -1,23 +1,30 @@
 import { useStateContext } from "utils/StateContext";
+import { portfolioItems, AGSFlix } from "utils/constants";
+
+const Title = ({ children }) => (
+    <div className="text-[2rem] font-bold text-white">{children}</div>
+);
 
 export default function PortfolioDetailContainer() {
     const { projectSelected, selectedProjectName } = useStateContext();
+    const trimmedName = selectedProjectName.replace(/\s/g, '');
+    const project = portfolioItems[trimmedName] || AGSFlix;
     return (
-        <div className="portfolioDetailContainer">
+        <div className="w-full bg-cyan-700 consistentRounding text-center mt-4 p-4">
             {projectSelected ? (
                 <div className="portfolioDetail">
-                    <div className="portfolioDetailTitle">
+                    <Title>
                         {selectedProjectName}
-                    </div>
-                    <div className="portfolioDetailDescription">
-                        {selectedProjectName} is a project I worked on.
+                    </Title>
+                    <div className="text-white text-[1.2rem]">
+                        {project.description}
                     </div>
                 </div>
             ) : (
                 <div className="portfolioDetail">
-                    <div className="portfolioDetailTitle">
+                    <Title>
                         Select a project to view details
-                    </div>
+                    </Title>
                 </div>
             )}
         </div>
