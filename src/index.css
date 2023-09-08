@@ -50,9 +50,12 @@
   }
 
   .pageContainer {
-    @apply bg-cyan-600 h-screen w-screen flex flex-col;
+    @apply bg-cyan-600 h-full w-full
+    flex flex-col;
     /* LEFT IS SIDEBAR WIDTH + PAGE PADDING */
     padding: var(--page-padding);
+    min-height: 100vh;
+    min-width: 100vw;
   }
   .sidebar {
     @apply fixed m-0
