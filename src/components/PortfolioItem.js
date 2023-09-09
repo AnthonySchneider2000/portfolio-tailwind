@@ -24,7 +24,7 @@ export default function PortfolioItem({ title, description, image, link }) {
   return (
     <div
       className={`portfolioItem ${itemHeight} ${
-        isSelected ? "bg-slate-800" : "iconBackground"
+        isSelected ? "bg-slate-800 cursor-pointer" : "iconBackground"
       }`}
       onClick={handleClick}
     >
