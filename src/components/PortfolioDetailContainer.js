@@ -90,7 +90,7 @@ export default function PortfolioDetailContainer() {
   const trimmedName = selectedProjectName.replace(/\s/g, "");
   project = portfolioItems[trimmedName];
   return (
-    <div className="w-full bg-cyan-700 consistentRounding text-center mt-4 p-4  text-white">
+    <div className="w-full bg-cyan-700 consistentRounding text-center p-4  text-white">
       {projectSelected ? <ProjectIsSelected /> : <ProjectIsNotSelected />}
     </div>
   );

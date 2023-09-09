@@ -2,7 +2,7 @@ import PortfolioItem from "components/PortfolioItem";
 import { portfolioItems } from "utils/constants";
 export const PortfolioItemContainer = () => {
   return (
-    <>
+    <div>
       <div className="text-4xl font-bold ml-4 text-white">Portfolio</div>
       <div className="portfolioItemContainer">
         {Object.keys(portfolioItems).map((key) => {
@@ -18,6 +18,6 @@ export const PortfolioItemContainer = () => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };

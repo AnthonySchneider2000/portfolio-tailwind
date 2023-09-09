@@ -55,7 +55,7 @@ html{
 
   .pageContainer {
     @apply bg-cyan-600 h-full w-full
-    flex flex-col;
+    flex flex-col gap-4;
     /* LEFT IS SIDEBAR WIDTH + PAGE PADDING */
     padding: var(--page-padding);
     min-height: 100vh;
