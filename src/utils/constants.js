@@ -51,7 +51,7 @@ export const technologies = {
     image: "Test",
     types: types.Layout,
     link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
-    requires: [],
+    //requires: [],
   },
   CSS: {
     title: "CSS",
@@ -60,7 +60,7 @@ export const technologies = {
     image: "Test",
     types: types.Styling,
     link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-    requires: [],
+    //requires: [],
   },
   JavaScript: {
     title: "JavaScript",
@@ -69,7 +69,7 @@ export const technologies = {
     image: "Test",
     types: types.Scripting,
     link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-    requires: [],
+    //requires: [],
   },
   TypeScript: {
     title: "TypeScript",
@@ -78,7 +78,7 @@ export const technologies = {
     image: "Test",
     types: types.Scripting,
     link: "https://www.typescriptlang.org/",
-    requires: this.JavaScript,
+    //requires: [this.JavaScript],
   },
   React: {
     title: "React",
@@ -86,7 +86,7 @@ export const technologies = {
     image: "Test",
     types: [types.Layout, types.Scripting],
     link: "https://reactjs.org/",
-    requires: [this.JavaScript, this.HTML, this.CSS],
+    //requires: [this.JavaScript, this.HTML, this.CSS],
   },
   Angular: {
     title: "Angular",
@@ -95,7 +95,7 @@ export const technologies = {
     image: "Test",
     types: [types.Layout, types.Scripting],
     link: "https://angular.io/",
-    requires: [this.TypeScript, this.HTML, this.CSS],
+    //requires: [this.TypeScript, this.HTML, this.CSS],
   },
   MaterialUI: {
     title: "Material UI",
@@ -103,7 +103,7 @@ export const technologies = {
     image: "Test",
     types: [types.Styling],
     link: "https://material-ui.com/",
-    requires: [this.React],
+    //requires: [this.React],
   },
   NextJS: {
     title: "NextJS",
@@ -111,7 +111,7 @@ export const technologies = {
     image: "Test",
     types: [types.Scripting],
     link: "https://nextjs.org/",
-    requires: [this.React, this.NodeJS],
+    //requires: [this.React, this.NodeJS],
   },
   NodeJS: {
     title: "NodeJS",
@@ -120,7 +120,7 @@ export const technologies = {
     image: "Test",
     types: [types.Scripting],
     link: "https://nodejs.org/en/",
-    requires: [],
+    //requires: [],
   },
   TailwindCSS: {
     title: "Tailwind CSS",
@@ -129,7 +129,7 @@ export const technologies = {
     image: "Test",
     types: [types.Styling],
     link: "https://tailwindcss.com/",
-    requires: [this.CSS],
+    //requires: [this.CSS],
   },
   Vercel: {
     title: "Vercel",
@@ -137,7 +137,7 @@ export const technologies = {
     image: "Test",
     types: [types.Deployment],
     link: "https://vercel.com/",
-    requires: [],
+    //requires: [],
   },
   Django: {
     title: "Django",
@@ -146,7 +146,7 @@ export const technologies = {
     image: "Test",
     types: [types.Scripting],
     link: "https://www.djangoproject.com/",
-    requires: [this.Python],
+    //requires: [this.Python],
   },
   Python: {
     title: "Python",
@@ -155,7 +155,7 @@ export const technologies = {
     image: "Test",
     types: [types.Scripting],
     link: "https://www.python.org/",
-    requires: [],
+    //requires: [],
   },
   MongoDB: {
     title: "MongoDB",
@@ -164,7 +164,7 @@ export const technologies = {
     image: "Test",
     types: [types.Database],
     link: "https://www.mongodb.com/",
-    requires: [],
+    //requires: [],
   },
   MySQL: {
     title: "MySQL",
@@ -172,7 +172,7 @@ export const technologies = {
     image: "Test",
     types: [types.Database],
     link: "https://www.mysql.com/",
-    requires: [],
+    //requires: [],
   },
   SQLite: {
     title: "SQLite",
@@ -181,7 +181,7 @@ export const technologies = {
     image: "Test",
     types: [types.Database],
     link: "https://www.sqlite.org/index.html",
-    requires: [],
+    //requires: [],
   },
   Git: {
     title: "Git",
@@ -190,7 +190,7 @@ export const technologies = {
     image: "Test",
     types: types.VersionControl,
     link: "https://git-scm.com/",
-    requires: [],
+    //requires: [],
   },
   GitHub: {
     title: "GitHub",
@@ -199,7 +199,7 @@ export const technologies = {
     image: "Test",
     types: types.VersionControl,
     link: "https://github.com/",
-    requires: [this.Git],
+    //requires: [this.Git],
   },
   C: {
     title: "C",
@@ -208,7 +208,7 @@ export const technologies = {
     image: "Test",
     types: [types.Scripting],
     link: "https://en.wikipedia.org/wiki/C_(programming_language)",
-    requires: [],
+    //requires: [],
   },
   "C++": {
     title: "C++",
@@ -217,7 +217,7 @@ export const technologies = {
     image: "Test",
     types: [types.Scripting],
     link: "https://en.wikipedia.org/wiki/C%2B%2B",
-    requires: [],
+    //requires: [],
   },
   Java: {
     title: "Java",
@@ -226,7 +226,7 @@ export const technologies = {
     image: "Test",
     types: [types.Scripting],
     link: "https://www.java.com/en/",
-    requires: [],
+    //requires: [],
   },
   "C#": {
     title: "C#",
@@ -235,7 +235,7 @@ export const technologies = {
     image: "Test",
     types: [types.Scripting],
     link: "https://docs.microsoft.com/en-us/dotnet/csharp/",
-    requires: [],
+    //requires: [],
   },
   Unity: {
     title: "Unity",
@@ -244,7 +244,7 @@ export const technologies = {
     image: "Test",
     types: [types.GameEngine],
     link: "https://unity.com/",
-    requires: ["C#"],
+    //requires: ["C#"],
   },
   Rust: {
     title: "Rust",
@@ -253,7 +253,7 @@ export const technologies = {
     image: "Test",
     types: [types.Scripting],
     link: "https://www.rust-lang.org/",
-    requires: [],
+    //requires: [],
   },
 };
 export const portfolioItems = {
@@ -261,7 +261,7 @@ export const portfolioItems = {
     title: "AGSFlix",
     description: "Test",
     image: "Test",
-    technologies: [this.React, this.MaterialUI, this.Vercel],
+    technologies: [technologies.React, technologies.MaterialUI, technologies.Vercel],
     link: "https://agsflix.vercel.app/",
     github: "https://github.com/AnthonySchneider2000/AGSFlix",
   },
@@ -269,7 +269,7 @@ export const portfolioItems = {
     title: "Trail Tours",
     description: "Test",
     image: "Test",
-    technologies: [this.React, this.MaterialUI, this.Vercel],
+    technologies: [technologies.React, technologies.MaterialUI, technologies.Vercel],
     link: "https://trail-tours.vercel.app/",
     github:
       "https://github.com/AnthonySchneider2000/React-Material-UI-Trail-Tour-Web-App",
@@ -278,7 +278,7 @@ export const portfolioItems = {
     title: "Playlist",
     description: "Test",
     image: "Test",
-    technologies: [this.NextJS, this.Vercel],
+    technologies: [technologies.NextJS, technologies.Vercel],
     link: "https://youtube-playlist-manager-ags.vercel.app/",
     github:
       "https://github.com/AnthonySchneider2000/NextJS-YouTube-Playlist-Manager",
@@ -287,7 +287,7 @@ export const portfolioItems = {
     title: "Portfolio",
     description: "Test",
     image: "Test",
-    technologies: [this.React, this.MaterialUI, this.Vercel, this.TailwindCSS],
+    technologies: [technologies.React, technologies.MaterialUI, technologies.Vercel, technologies.TailwindCSS],
     link: "is.gd/AnthonySchneiderPortfolio",
     github: "https://github.com/AnthonySchneider2000/portfolio-tailwind",
   },
