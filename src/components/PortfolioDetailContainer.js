@@ -1,11 +1,9 @@
 import { useStateContext } from "utils/StateContext";
 import { portfolioItems, AGSFlix } from "utils/constants";
 import { GitHub } from "@mui/icons-material";
-import { useState } from "react";
-import { getTechnologies, getTypes, getCategories } from "utils/portfolioUtils";
+import { useState, useEffect } from "react";
 
 let project = AGSFlix;
-
 
 const ProjectIsNotSelected = () => {
   return <Title>Select a project to view details</Title>;
@@ -21,147 +19,54 @@ const Link = ({ children, href }) => (
   </a>
 );
 
-const TypeContainer = () => {
-//   constainer with nested tabs of categories -> types -> technologies
-    const [activeCategory, setActiveCategory] = useState("");
-    const [activeType, setActiveType] = useState("");
-    const [activeTechnology, setActiveTechnology] = useState("");
-    const [activeTechnologies, setActiveTechnologies] = useState([]);
-    const [activeTypes, setActiveTypes] = useState([]);
+const Sections = ({ project }) => {
+  //each section is a tab
+  //opening a tab will reveal the technologies used in that section
+  const sections = project.sections;
+  const [selectedSection, setSelectedSection] = useState(0);
+  const [technologies, setTechnologies] = useState([]);
 
-    const technologies = getTechnologies(project);
-    const types = getTypes(technologies);
-    const categories = getCategories(types);
+  const handleSectionClick = (sectionNumber) => {
+    setSelectedSection(sectionNumber);
+    setTechnologies(project.sections[sectionNumber].technologies);
+  };
 
-
-    const typesInThisCategory = (category) => {
-        const categoryTypes = [];
-        types.forEach((type) => {
-            if (types[type].categories.includes(category)) {
-                categoryTypes.push(type);
-            }
-        });
-        return categoryTypes;
-    };
-
-    const technologiesInThisType = (type) => {
-        const typeTechnologies = [];
-        technologies.forEach((technology) => {
-            if (technologies[technology].types.includes(type)) {
-                typeTechnologies.push(technology);
-            }
-        });
-        return typeTechnologies;
-    };
-
-    const handleCategoryClick = (category) => {
-        if (category === activeCategory) {
-            setActiveCategory("");
-            setActiveType("");
-            setActiveTechnology("");
-            setActiveTechnologies([]);
-            setActiveTypes([]);
-        } else {
-            setActiveCategory(category);
-            setActiveType("");
-            setActiveTechnology("");
-            setActiveTechnologies([]);
-            setActiveTypes([]);
-            const types = typesInThisCategory(category);
-            setActiveTypes(types);
-        }
-    };
-
-    const handleTypeClick = (type) => {
-        if (type === activeType) {
-            setActiveType("");
-            setActiveTechnology("");
-            setActiveTechnologies([]);
-        } else {
-            setActiveType(type);
-            setActiveTechnology("");
-            setActiveTechnologies([]);
-            const technologies = technologiesInThisType(type);
-            setActiveTechnologies(technologies);
-        }
-    };
-
-    const handleTechnologyClick = (technology) => {
-        if (technology === activeTechnology) {
-            setActiveTechnology("");
-        } else {
-            setActiveTechnology(technology);
-        }
-    };
-
-
-
-        
-
-
-
-  
-
-
+  useEffect(() => {
+    setSelectedSection(0);
+    setTechnologies(project.sections[0].technologies);
+  }, [project]);
 
   return (
     <>
-        <div className="flex flex-row justify-center">
-            {categories.map((category) => {
-                return (
-                    <div
-                        key={category}
-                        className={`flex flex-col justify-center items-center m-2 p-2 rounded-md ${
-                            category === activeCategory
-                                ? "bg-cyan-500"
-                                : "bg-cyan-400"
-                        }`}
-                        onClick={() => handleCategoryClick(category)}
-                    >
-                        {category}
-                    </div>
-                );
-            })}
-        </div>
-            <div className="flex flex-row justify-center">
-                {activeCategory !== "" &&
-                    activeTypes.map((type) => {
-                        return (
-                            <div
-                                key={type}
-                                className={`flex flex-col justify-center items-center m-2 p-2 rounded-md ${
-                                    type === activeType
-                                        ? "bg-cyan-500"
-                                        : "bg-cyan-400"
-                                }`}
-                                onClick={() => handleTypeClick(type)}
-                            >
-                                {type}
-                            </div>
-                        );
-                    })}
+      <div className="flex flex-row justify-center">
+        {sections.map((section, index) => {
+          return (
+            <div
+              key={index}
+              className={`flex flex-col justify-center items-center m-2 p-2 rounded-md ${
+                selectedSection === index
+                  ? "bg-slate-700 cursor-pointer"
+                  : "iconBackground"
+              }`}
+              onClick={() => handleSectionClick(index)}
+            >
+              {section.title}
             </div>
-            <div className="flex flex-row justify-center">
-                {activeType !== "" &&
-                    activeTechnologies.map((technology) => {
-                        return (
-                            <div
-                                key={technology}
-                                className={`flex flex-col justify-center items-center m-2 p-2 rounded-md ${
-                                    technology === activeTechnology
-                                        ? "bg-cyan-500"
-                                        : "bg-cyan-400"
-                                }`}
-                                onClick={() => handleTechnologyClick(technology)}
-                            >
-                                {technology}
-                            </div>
-                        );
-                    })}
+          );
+        })}
+      </div>
+      <div className="flex flex-row justify-evenly border-cyan-800 border-[2px] rounded-2xl">
+        {technologies.map((technology, index) => {
+          return (
+            <div
+              key={index}
+              className={`flex flex-col justify-center items-center w-full m-2 p-2 rounded-md iconBackground`}
+            >
+              {technology.title}
             </div>
-
-
-      
+          );
+        })}
+      </div>
     </>
   );
 };
@@ -175,7 +80,7 @@ const ProjectIsSelected = () => {
       <Link href={project.github}>
         <GitHub /> Source Code: {project.github}
       </Link>
-      <TypeContainer />
+      <Sections project={project} />
     </div>
   );
 };

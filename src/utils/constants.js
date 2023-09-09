@@ -261,7 +261,28 @@ export const portfolioItems = {
     title: "AGSFlix",
     description: "Test",
     image: "Test",
-    technologies: [technologies.React, technologies.MaterialUI, technologies.Vercel],
+    // technologies: [technologies.React, technologies.MaterialUI, technologies.Vercel],
+    sectionCount: 2,
+    sections: [
+        {
+            title: "Frontend",
+            technologies: [
+                technologies.React,
+                technologies.MaterialUI,
+                technologies.HTML,
+                technologies.CSS,
+                technologies.JavaScript,
+            ],
+        },
+        {
+            title: "DevOps",
+            technologies: [
+                technologies.Vercel,
+                technologies.Git,
+                technologies.GitHub,
+            ],
+        },
+    ],
     link: "https://agsflix.vercel.app/",
     github: "https://github.com/AnthonySchneider2000/AGSFlix",
   },
@@ -269,7 +290,28 @@ export const portfolioItems = {
     title: "Trail Tours",
     description: "Test",
     image: "Test",
-    technologies: [technologies.React, technologies.MaterialUI, technologies.Vercel],
+    // technologies: [technologies.React, technologies.MaterialUI, technologies.Vercel],
+    sectionCount: 2,
+    sections: [
+        {
+            title: "Frontend",
+            technologies: [
+                technologies.React,
+                technologies.MaterialUI,
+                technologies.HTML,
+                technologies.CSS,
+                technologies.JavaScript,
+            ],
+        },
+        {
+            title: "DevOps",
+            technologies: [
+                technologies.Vercel,
+                technologies.Git,
+                technologies.GitHub,
+            ],
+        },
+    ],
     link: "https://trail-tours.vercel.app/",
     github:
       "https://github.com/AnthonySchneider2000/React-Material-UI-Trail-Tour-Web-App",
@@ -278,7 +320,36 @@ export const portfolioItems = {
     title: "Playlist",
     description: "Test",
     image: "Test",
-    technologies: [technologies.NextJS, technologies.Vercel],
+    // technologies: [technologies.NextJS, technologies.Vercel],
+    sectionCount: 3,
+    sections: [
+        {
+            title: "Frontend",
+            technologies: [
+                technologies.NextJS,
+                technologies.React,
+                technologies.HTML,
+                technologies.CSS,
+                technologies.JavaScript,
+            ],
+        },
+        {
+            title: "Backend",
+            technologies: [
+                technologies.NextJS,
+                technologies.NodeJS,
+                technologies.MongoDB,
+            ],
+        },
+        {
+            title: "DevOps",
+            technologies: [
+                technologies.Vercel,
+                technologies.Git,
+                technologies.GitHub,
+            ],
+        },
+    ],
     link: "https://youtube-playlist-manager-ags.vercel.app/",
     github:
       "https://github.com/AnthonySchneider2000/NextJS-YouTube-Playlist-Manager",
@@ -287,7 +358,29 @@ export const portfolioItems = {
     title: "Portfolio",
     description: "Test",
     image: "Test",
-    technologies: [technologies.React, technologies.MaterialUI, technologies.Vercel, technologies.TailwindCSS],
+    // technologies: [technologies.React, technologies.MaterialUI, technologies.Vercel, technologies.TailwindCSS],
+    sectionCount: 2,
+    sections: [
+        {
+            title: "Frontend",
+            technologies: [
+                technologies.React,
+                technologies.MaterialUI,
+                technologies.TailwindCSS,
+                technologies.HTML,
+                technologies.CSS,
+                technologies.JavaScript,
+            ],
+        },
+        {
+            title: "DevOps",
+            technologies: [
+                technologies.Vercel,
+                technologies.Git,
+                technologies.GitHub,
+            ],
+        },
+    ],
     link: "is.gd/AnthonySchneiderPortfolio",
     github: "https://github.com/AnthonySchneider2000/portfolio-tailwind",
   },
