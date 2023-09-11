@@ -3,32 +3,32 @@ import AssignmentIcon from "@mui/icons-material/Assignment";
 import { GitHub } from "@mui/icons-material";
 import { LinkedIn } from "@mui/icons-material";
 
+const LinkComponent = ({ children, href }) => {
+  return (
+    <a href={href} target="_blank" rel="noreferrer">
+      <div className="text-2xl iconTextStyle iconTransition">{children}</div>
+    </a>
+  );
+};
+
 const Links = () => {
   return (
-    <div className="flex flex-col justify-center items-center gap-4 pb-4">
-      <a href={resume} target="_blank" rel="noreferrer">
-        <div className="text-2xl font-bold">
-          <AssignmentIcon fontSize="large" /> Resume
-        </div>
-      </a>
-      <a
-        href="https://www.linkedin.com/in/anthony-schneider-854ab6249/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <div className="text-2xl font-bold">
-          <LinkedIn fontSize="large" /> LinkedIn
-        </div>
-      </a>
-      <a
-        href="https://github.com/AnthonySchneider2000"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <div className="text-2xl font-bold">
-          <GitHub fontSize="large" /> GitHub
-        </div>
-      </a>
+    <div className="w-full p-4 bg-cyan-700 consistentRounding flex flex-col justify-center items-center gap-4 pb-4 text-center">
+      <div className="text-xl w-[75%]">
+        My name is Anthony Schneider. I am a software engineer with a passion
+        for learning and creating. I have a B.S. in Computer Science from
+        Southern Illinois University Edwardsville, and am ambitious for any work
+        opportunities in software development or information technology.
+      </div>
+      <LinkComponent href={resume}>
+        <AssignmentIcon /> Resume
+      </LinkComponent>
+      <LinkComponent href="https://www.linkedin.com/in/anthony-schneider-854ab6249/">
+        <LinkedIn /> LinkedIn
+      </LinkComponent>
+      <LinkComponent href="https://github.com/AnthonySchneider2000">
+        <GitHub /> GitHub
+      </LinkComponent>
     </div>
   );
 };
@@ -37,15 +37,8 @@ export default function AboutMe() {
   return (
     <div className="text-white">
       <div className="text-4xl ml-4 font-bold">About me</div>
-      <div className="w-full bg-cyan-700 consistentRounding text-center">
-        <div className="text-xl p-4">
-          My name is Anthony Schneider. I am a software engineer with a passion
-          for learning and creating. <br />
-          I have a B.S. in Computer Science from Southern Illinois University
-          Edwardsville. <br />
-        </div>
-        <Links />
-      </div>
+
+      <Links />
     </div>
   );
 }
