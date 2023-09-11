@@ -1,5 +1,37 @@
 import resume from "materials/resume.pdf";
 import AssignmentIcon from "@mui/icons-material/Assignment";
+import { GitHub } from "@mui/icons-material";
+import { LinkedIn } from "@mui/icons-material";
+
+const Links = () => {
+  return (
+    <div className="flex flex-col justify-center items-center gap-4 pb-4">
+      <a href={resume} target="_blank" rel="noreferrer">
+        <div className="text-2xl font-bold">
+          <AssignmentIcon fontSize="large" /> Resume
+        </div>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/anthony-schneider-854ab6249/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <div className="text-2xl font-bold">
+          <LinkedIn fontSize="large" /> LinkedIn
+        </div>
+      </a>
+      <a
+        href="https://github.com/AnthonySchneider2000"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <div className="text-2xl font-bold">
+          <GitHub fontSize="large" /> GitHub
+        </div>
+      </a>
+    </div>
+  );
+};
 
 export default function AboutMe() {
   return (
@@ -12,11 +44,7 @@ export default function AboutMe() {
           I have a B.S. in Computer Science from Southern Illinois University
           Edwardsville. <br />
         </div>
-        <a href={resume} target="_blank" rel="noreferrer">
-          <div className="text-2xl font-bold">
-            <AssignmentIcon fontSize="large" /> Resume
-          </div>
-        </a>
+        <Links />
       </div>
     </div>
   );
