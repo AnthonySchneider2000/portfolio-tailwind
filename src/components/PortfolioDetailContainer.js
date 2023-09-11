@@ -43,7 +43,7 @@ const Sections = ({ project }) => {
           return (
             <div
               key={index}
-              className={`flex flex-col justify-center items-center m-2 p-2 rounded-md ${
+              className={`flex flex-col justify-center items-center m-2 p-2 rounded-md iconTransition ${
                 selectedSection === index
                   ? "bg-slate-700 cursor-pointer"
                   : "iconBackground"
@@ -60,7 +60,7 @@ const Sections = ({ project }) => {
           return (
             <div
               key={index}
-              className={`m-2 p-2 rounded-md iconBackground`}
+              className={`m-2 p-2 rounded-md iconTransition iconBackground`}
             >
               {technology.title}
             </div>
