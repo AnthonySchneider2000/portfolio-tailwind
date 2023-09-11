@@ -64,7 +64,7 @@ html{
   .sidebar {
     @apply fixed m-0
     flex justify-evenly items-center
-    bg-gray-900 consistentRounding;
+    bg-gray-900 consistentRounding z-10;
     top: var(--page-padding);
     left: var(--page-padding);
   }
