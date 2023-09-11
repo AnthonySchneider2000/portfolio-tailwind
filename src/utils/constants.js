@@ -260,7 +260,7 @@ export const portfolioItems = {
   AGSFlix: {
     title: "AGSFlix",
     description: "A Netflix clone, uses the oMDB API to search for movies and display them in a Netflix style layout.",
-    image: "Test",
+    image: "https://i.imgur.com/0jxCm61.png",
     // technologies: [technologies.React, technologies.MaterialUI, technologies.Vercel],
     sectionCount: 2,
     sections: [
@@ -289,7 +289,7 @@ export const portfolioItems = {
   TrailTours: {
     title: "Trail Tours",
     description: "A website for a fictional company that offers guided tours of hiking trails.",
-    image: "Test",
+    image: "https://i.imgur.com/wdzOzLZ.png",
     // technologies: [technologies.React, technologies.MaterialUI, technologies.Vercel],
     sectionCount: 2,
     sections: [
@@ -319,7 +319,7 @@ export const portfolioItems = {
   Playlist: {
     title: "Playlist",
     description: "A website that allows you to create and manage YouTube playlists.",
-    image: "Test",
+    image: "https://i.imgur.com/ft0mpBk.png",
     // technologies: [technologies.NextJS, technologies.Vercel],
     sectionCount: 3,
     sections: [
@@ -357,7 +357,7 @@ export const portfolioItems = {
   Portfolio: {
     title: "Portfolio",
     description: "This website, a portfolio of my projects.",
-    image: "Test",
+    image: "https://i.imgur.com/4amD8vo.png",
     // technologies: [technologies.React, technologies.MaterialUI, technologies.Vercel, technologies.TailwindCSS],
     sectionCount: 2,
     sections: [
