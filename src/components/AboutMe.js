@@ -11,15 +11,20 @@ const LinkComponent = ({ children, href }) => {
   );
 };
 
+const Bio = () => {
+  return (
+    <div className="text-xl w-[75%]">
+      My name is Anthony Schneider. I am a software engineer with a passion for
+      learning and creating. I have a B.S. in Computer Science from Southern
+      Illinois University Edwardsville and am ambitious for any work
+      opportunities in software development or information technology.
+    </div>
+  );
+};
+
 const Links = () => {
   return (
-    <div className="w-full p-4 bg-cyan-700 consistentRounding flex flex-col justify-center items-center gap-4 pb-4 text-center">
-      <div className="text-xl w-[75%]">
-        My name is Anthony Schneider. I am a software engineer with a passion
-        for learning and creating. I have a B.S. in Computer Science from
-        Southern Illinois University Edwardsville, and am ambitious for any work
-        opportunities in software development or information technology.
-      </div>
+    <>
       <LinkComponent href={resume}>
         <AssignmentIcon /> Resume
       </LinkComponent>
@@ -29,6 +34,15 @@ const Links = () => {
       <LinkComponent href="https://github.com/AnthonySchneider2000">
         <GitHub /> GitHub
       </LinkComponent>
+    </>
+  );
+};
+
+const Container = () => {
+  return (
+    <div className="w-full p-4 bg-cyan-700 consistentRounding flex flex-col justify-center items-center gap-4 pb-4 text-center">
+      <Bio />
+      <Links />
     </div>
   );
 };
@@ -38,7 +52,7 @@ export default function AboutMe() {
     <div className="text-white">
       <div className="text-4xl ml-4 font-bold">About me</div>
 
-      <Links />
+      <Container />
     </div>
   );
 }
