@@ -7,7 +7,6 @@ export default function PortfolioItem({ title, description, image, link }) {
   const { selectProject, selectedProjectName } = useStateContext();
   const [isSelected, setIsSelected] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const [displayImage, setDisplayImage] = React.useState(false);
 
   if (selectedProjectName === title && !isSelected) {
     setIsSelected(true);
@@ -59,22 +58,13 @@ export default function PortfolioItem({ title, description, image, link }) {
           : "iconBackground hover:scale-110"
       }`}
       onClick={handleClick}
-      onMouseOver={() => setDisplayImage(true)}
-      onMouseLeave={() => setDisplayImage(false)}
     >
-      {/* display image if displayImage is true, else display div that says hello */}
-      {displayImage ? (
-        <div className={`portfolioItemText ${itemText}`}>
+      <div className={`portfolioItemText ${itemText}`}>
         <div>
           {/* this div exists so the title doesnt touch the outside of the a tag, which has padding */}
           {title}
         </div>
       </div>
-        ) : (
-        <img src={image} alt={title} className={`${itemHeight} ${itemWidth}`} />
-      )}
-
-      
       
       <Popover
         open={Boolean(anchorEl)}
