@@ -55,12 +55,12 @@ const Sections = ({ project }) => {
           );
         })}
       </div>
-      <div className="flex flex-row justify-evenly border-cyan-800 border-[2px] rounded-2xl">
+      <div className="flex flex-row flex-wrap justify-evenly shadow-md border-cyan-800 border-[2px] rounded-2xl">
         {technologies.map((technology, index) => {
           return (
             <div
               key={index}
-              className={`flex flex-col justify-center items-center w-full m-2 p-2 rounded-md iconBackground`}
+              className={`m-2 p-2 rounded-md iconBackground`}
             >
               {technology.title}
             </div>
