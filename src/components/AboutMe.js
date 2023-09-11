@@ -13,7 +13,7 @@ const LinkComponent = ({ children, href }) => {
 
 const Bio = () => {
   return (
-    <div className="text-xl w-[75%]">
+    <div className="text-xl">
       My name is Anthony Schneider. I am a software engineer with a passion for
       learning and creating. I have a B.S. in Computer Science from Southern
       Illinois University Edwardsville and am ambitious for any work
