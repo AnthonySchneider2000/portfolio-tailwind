@@ -1,12 +1,12 @@
-import HomeIcon from "@mui/icons-material/Home";
-import ContactPageIcon from '@mui/icons-material/ContactPage';
+import AboutMeIcon from "@mui/icons-material/Person";
+import PortfolioIcon from '@mui/icons-material/Article';
 import MailIcon from "@mui/icons-material/Mail";
 import { Tooltip } from "@mui/material";
 
 const items = [
-  { icon: <HomeIcon fontSize="large" />, text: "Home" },
-  { icon: <ContactPageIcon fontSize="large" />, text: "Contact" },
-  { icon: <MailIcon fontSize="large" />, text: "Email" },
+  { icon: <AboutMeIcon fontSize="large" />, text: "About Me" },
+  { icon: <PortfolioIcon fontSize="large" />, text: "Portfolio" },
+  { icon: <MailIcon fontSize="large" />, text: "Contact" },
 ];
 
 const SidebarItem = ({ icon, text, placement }) => {
