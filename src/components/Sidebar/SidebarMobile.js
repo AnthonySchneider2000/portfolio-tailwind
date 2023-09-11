@@ -1,5 +1,5 @@
 import HomeIcon from "@mui/icons-material/Home";
-import PhoneIcon from "@mui/icons-material/Phone";
+import ContactPageIcon from '@mui/icons-material/ContactPage';
 import MailIcon from "@mui/icons-material/Mail";
 import { Tooltip } from "@mui/material";
 
@@ -26,7 +26,7 @@ const SidebarMobile = () => {
   return (
     <div className="msidebar">
       <Item icon={<HomeIcon fontSize="large" />} text="Home" />
-      <Item icon={<PhoneIcon fontSize="large" />} text="Contact" />
+      <Item icon={<ContactPageIcon fontSize="large" />} text="Contact" />
       <Item icon={<MailIcon fontSize="large" />} text="Email" />
     </div>
   );
