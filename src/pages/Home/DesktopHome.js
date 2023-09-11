@@ -6,8 +6,8 @@ import AboutMe from "components/AboutMe";
 function DesktopHome() {
   return (
     <div className="dpageContainer">
-      <AboutMe />
       <Sidebar sidebarVersion={"desktop"} />
+      <AboutMe />
       <PortfolioItemContainer />
       <PortfolioDetailContainer />
     </div>

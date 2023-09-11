@@ -6,8 +6,8 @@ import AboutMe from "components/AboutMe";
 function MobileHome() {
   return (
     <div className="mpageContainer">
-      <AboutMe />
       <Sidebar sidebarVersion={"mobile"} />
+      <AboutMe />
       <PortfolioItemContainer />
       <PortfolioDetailContainer />
     </div>
