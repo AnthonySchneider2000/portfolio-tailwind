@@ -44,7 +44,7 @@ const TopSection = () => {
 
 const Links = () => {
   return (
-    <>
+    <div className="flex flex-row flex-wrap gap-4">
       <LinkComponent href={resume}>
         <AssignmentIcon /> Resume
       </LinkComponent>
@@ -54,7 +54,7 @@ const Links = () => {
       <LinkComponent href="https://github.com/AnthonySchneider2000">
         <GitHub /> GitHub
       </LinkComponent>
-    </>
+    </div>
   );
 };
 
