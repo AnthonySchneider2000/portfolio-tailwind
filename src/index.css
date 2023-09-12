@@ -10,6 +10,9 @@ html{
     background: rgb(8 145 178);
     font-family: 'Roboto', sans-serif;
 }
+::-webkit-scrollbar {
+    display:none;
+}
 @layer components {
   /* ------------------ UNIVERSAL STYLES ------------------ */
   /* UTILS */
