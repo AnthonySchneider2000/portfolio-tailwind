@@ -23,10 +23,10 @@ export default function PortfolioItem({ title, description, image, link }) {
 
   return (
     <div
-      className={`portfolioItem ${itemHeight} ${
+      className={`portfolioItem m-6 ${itemHeight} ${
         isSelected
-          ? "bg-slate-700 cursor-pointer scale-110"
-          : "iconBackground hover:scale-110"
+          ? "bg-cyan-800 scale-[1.2]"
+          : "hover:scale-[1.2]"
       }`}
       onClick={handleClick}
     >
