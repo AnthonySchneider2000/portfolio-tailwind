@@ -1,15 +1,15 @@
 import AboutMeIcon from "@mui/icons-material/Person";
-import PortfolioIcon from '@mui/icons-material/Article';
+import PortfolioIcon from "@mui/icons-material/Article";
 import MailIcon from "@mui/icons-material/Mail";
 import { Tooltip } from "@mui/material";
 
 const items = [
-  { icon: <AboutMeIcon fontSize="large" />, text: "About Me" },
-  { icon: <PortfolioIcon fontSize="large" />, text: "Portfolio" },
-  { icon: <MailIcon fontSize="large" />, text: "Contact" },
+  { icon: <AboutMeIcon fontSize="large" />, text: "About Me", link: "about" },
+  { icon: <PortfolioIcon fontSize="large" />, text: "Portfolio", link: "portfolio" },
+  { icon: <MailIcon fontSize="large" />, text: "Contact", link: "contact" },
 ];
 
-const SidebarItem = ({ icon, text, placement }) => {
+const SidebarItem = ({ icon, text, link, placement, scrollToSection, destinationRef  }) => {
   return (
     <Tooltip
       title={<div className="text-xl">{text}</div>}
@@ -23,12 +23,13 @@ const SidebarItem = ({ icon, text, placement }) => {
         },
       }}
     >
-      <div className="sidebarItem">{icon}</div>
+        <div className="sidebarItem" onClick={() => scrollToSection(destinationRef)}>
+          {icon}</div>
     </Tooltip>
   );
 };
 
-export default function Sidebar({ sidebarVersion }) {
+export default function Sidebar({ sidebarVersion, scrollToSection, aboutRef, portfolioRef, contactRef }) {
   const sidebarStyle = sidebarVersion === "mobile" ? "msidebar" : "dsidebar";
   const placement = sidebarVersion === "mobile" ? "bottom" : "right";
   return (
@@ -38,7 +39,10 @@ export default function Sidebar({ sidebarVersion }) {
           key={index}
           icon={item.icon}
           text={item.text}
+          link={item.link}
           placement={placement}
+          scrollToSection={scrollToSection}
+          destinationRef={item.link === "about" ? aboutRef : item.link === "portfolio" ? portfolioRef : contactRef}
         />
       ))}
     </div>

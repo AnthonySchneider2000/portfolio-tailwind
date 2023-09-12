@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 // import DesktopHome from "./DesktopHome";
 // import MobileHome from "./MobileHome";
@@ -5,7 +6,6 @@ import Sidebar from "components/Sidebar";
 import PortfolioItemContainer from "components/PortfolioItemContainer";
 import PortfolioDetailContainer from "components/PortfolioDetailContainer";
 import AboutMe from "components/AboutMe";
-
 
 // const HomeVersions = {
 //   desktop: DesktopHome,
@@ -17,16 +17,39 @@ function Home() {
   // const CurrentHome = HomeVersions[isMobile ? "mobile" : "desktop"];
   const version = isMobile ? "mobile" : "desktop";
   const homeStyle = isMobile ? "mpageContainer" : "dpageContainer";
-  console.log("homeStyle", homeStyle);
+  const topOffset = isMobile ? 112 + 32 : 16; // 112 is the height of the mobile sidebar, 32 is a rem of padding on each side
+
+  const aboutRef = useRef(null);
+  const portfolioRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const scrollToSection = (ref) => {
+    const scrollPosition =
+      window.scrollY + ref.current.getBoundingClientRect().top - topOffset;
+    window.scrollTo({ top: scrollPosition, behavior: "smooth" });
+  };
+
   return (
-    <div className={`${homeStyle} pr-4`}>
-      <Sidebar sidebarVersion={version} />
-      <AboutMe />
+    <div className={`${homeStyle}`}>
+      <Sidebar
+        sidebarVersion={version}
+        scrollToSection={scrollToSection}
+        aboutRef={aboutRef}
+        portfolioRef={portfolioRef}
+        contactRef={contactRef}
+      />
       <div className="h-screen">
-        gap
+        <div ref={aboutRef}></div>
+        <AboutMe />
       </div>
-      <PortfolioItemContainer />
-      <PortfolioDetailContainer />
+      <div className="h-screen">
+        <div ref={portfolioRef}></div>
+        <PortfolioItemContainer />
+        <PortfolioDetailContainer />
+      </div>
+      <div className="h-screen">
+        <div ref={contactRef}></div>
+      </div>
     </div>
   );
 }
