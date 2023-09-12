@@ -3,7 +3,6 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { Phone } from "@mui/icons-material";
 
 const Container = ({ children }) => {
   return (
@@ -31,7 +30,7 @@ export default function Contact() {
         <div>
           <LinkedInIcon /> Anthony Schneider
         </div>
-        
+
       </Container>
     </div>
   );
