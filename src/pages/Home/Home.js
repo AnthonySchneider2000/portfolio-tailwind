@@ -7,11 +7,48 @@ import PortfolioItemContainer from "components/PortfolioItemContainer";
 import PortfolioDetailContainer from "components/PortfolioDetailContainer";
 import AboutMe from "components/AboutMe";
 import Contact from "components/Contact";
+import { createTheme } from "@mui/material";
+import { ThemeProvider } from "@mui/material/styles";
 
 // const HomeVersions = {
 //   desktop: DesktopHome,
 //   mobile: MobileHome,
 // }
+
+let theme = createTheme({
+  palette: {
+    ochre: {
+      main: '#E3D026',
+      light: '#E9DB5D',
+      dark: '#A29415',
+      contrastText: '#242105',
+    },
+  },
+});
+
+theme = createTheme(theme, {
+  palette: {
+    salmon: theme.palette.augmentColor({
+      color: {
+        main: '#FF5733',
+      },
+      name: 'salmon',
+    }),
+    cyan: theme.palette.augmentColor({
+      color: {
+        main: 'rgba(21, 94, 117, 1)',
+      },
+      name: 'cyan',
+    }),
+    white: theme.palette.augmentColor({
+      color: {
+        main: '#FFFFFF',
+      }, 
+      name: 'white',
+    }),
+  },
+});
+
 
 function Home() {
   const isMobile = useMediaQuery({ query: "(max-aspect-ratio: 1/1)" });
@@ -31,28 +68,30 @@ function Home() {
   };
 
   return (
-    <div className={`${homeStyle}`}>
-      <Sidebar
-        sidebarVersion={version}
-        scrollToSection={scrollToSection}
-        aboutRef={aboutRef}
-        portfolioRef={portfolioRef}
-        contactRef={contactRef}
-      />
-      <div className="min-h-screen">
-        <div ref={aboutRef}></div>
-        <AboutMe />
+    <ThemeProvider theme={theme}>
+      <div className={`${homeStyle}`}>
+        <Sidebar
+          sidebarVersion={version}
+          scrollToSection={scrollToSection}
+          aboutRef={aboutRef}
+          portfolioRef={portfolioRef}
+          contactRef={contactRef}
+        />
+        <div className="min-h-screen">
+          <div ref={aboutRef}></div>
+          <AboutMe />
+        </div>
+        <div className="min-h-screen">
+          <div ref={portfolioRef}></div>
+          <PortfolioItemContainer />
+          <PortfolioDetailContainer />
+        </div>
+        <div className="min-h-screen">
+          <div ref={contactRef}></div>
+          <Contact />
+        </div>
       </div>
-      <div className="min-h-screen">
-        <div ref={portfolioRef}></div>
-        <PortfolioItemContainer />
-        <PortfolioDetailContainer />
-      </div>
-      <div className="min-h-screen">
-        <div ref={contactRef}></div>
-        <Contact />
-      </div>
-    </div>
+    </ThemeProvider>
   );
 }
 
