@@ -1,6 +1,7 @@
 import PortfolioItem from "components/PortfolioItem";
 import { portfolioItems } from "utils/constants";
-export const PortfolioItemContainer = () => {
+
+export default function PortfolioItemContainer () {
   return (
     <div>
       <div className="text-4xl font-bold ml-4 text-white">Portfolio</div>
