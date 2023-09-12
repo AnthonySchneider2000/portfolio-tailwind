@@ -1,12 +1,11 @@
 import React from "react";
 import { useStateContext } from "utils/StateContext";
 import { useMediaQuery } from "react-responsive";
-import Popover from "@mui/material/Popover";
+import { Tooltip } from "@mui/material";
 
 export default function PortfolioItem({ title, description, image, link }) {
   const { selectProject, selectedProjectName } = useStateContext();
   const [isSelected, setIsSelected] = React.useState(false);
-  const [anchorEl, setAnchorEl] = React.useState(null);
 
   if (selectedProjectName === title && !isSelected) {
     setIsSelected(true);
@@ -15,41 +14,13 @@ export default function PortfolioItem({ title, description, image, link }) {
   }
 
   const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
     selectProject(title);
   };
 
   const isMobile = useMediaQuery({ query: "(max-aspect-ratio: 1/1)" });
   const itemHeight = isMobile ? "h-32" : "h-48";
   const itemWidth = isMobile ? "w-32" : "w-48";
-  const itemText = isMobile ? "text-[1.5rem]" : "text-[200%]";
 
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-  
-  
-  React.useEffect(() => {
-    const handleDocumentClick = (event) => {
-      if (anchorEl && !anchorEl.contains(event.target)) {
-        // Click occurred outside the Popover and PortfolioItem
-        handleClose();
-      }
-    };
-    if (anchorEl) {
-      // Attach the click event listener when the Popover is open
-      document.addEventListener("click", handleDocumentClick);
-    } else {
-      // Remove the click event listener when the Popover is closed
-      document.removeEventListener("click", handleDocumentClick);
-    }
-  
-    // Clean up the effect when unmounting
-    return () => {
-      document.removeEventListener("click", handleDocumentClick);
-    };
-  }, [anchorEl]);
-  
   return (
     <div
       className={`portfolioItem ${itemHeight} ${
@@ -59,29 +30,24 @@ export default function PortfolioItem({ title, description, image, link }) {
       }`}
       onClick={handleClick}
     >
-      <div className={`portfolioItemText ${itemText}`}>
-        <div>
-          {/* this div exists so the title doesnt touch the outside of the a tag, which has padding */}
-          {title}
-        </div>
-      </div>
-      
-      <Popover
-        open={Boolean(anchorEl)}
-        anchorEl={anchorEl}
-        onClose={handleClose}
-        anchorOrigin={{
-          vertical: "top",
-          horizontal: "center",
-        }}
-        transformOrigin={{
-          vertical: "bottom",
-          horizontal: "center",
+      <Tooltip
+        title={<div className="text-xl">{title}</div>}
+        placement="bottom" // Use the provided placement prop
+        componentsProps={{
+          tooltip: {
+            sx: {
+              backgroundColor: "rgb(17 24 39)", // bg-gray-900
+              padding: "0.5rem",
+            },
+          },
         }}
       >
-        <img src={image} alt={title} className={`${itemHeight} ${itemWidth}`} />
-      </Popover>
-      
+        <img
+          src={image}
+          alt={title}
+          className={`${itemHeight} ${itemWidth} p-2`}
+        />
+      </Tooltip>
     </div>
   );
 }
