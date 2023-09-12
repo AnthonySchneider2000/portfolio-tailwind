@@ -315,8 +315,8 @@ export const portfolioItems = {
     github:
       "https://github.com/AnthonySchneider2000/React-Material-UI-Trail-Tour-Web-App",
   },
-  Playlist: {
-    title: "Playlist",
+  YouTubePlaylistManager: {
+    title: "YouTube Playlist Manager",
     description: "A website that allows you to create and manage YouTube playlists.",
     image: "https://i.imgur.com/GmKyAxR.png",
     // technologies: [technologies.NextJS, technologies.Vercel],
@@ -389,4 +389,4 @@ export const portfolioItems = {
 
 export const AGSFlix = portfolioItems.AGSFlix;
 export const TrailTours = portfolioItems.TrailTours;
-export const Playlist = portfolioItems.Playlist;
+export const YouTubePlaylistManager = portfolioItems.YouTubePlaylistManager;
