@@ -23,7 +23,7 @@ export default function PortfolioItem({ title, description, image, link }) {
 
   return (
     <div
-      className={`portfolioItem m-6 ${itemHeight} ${
+      className={`portfolioItem cursor-pointer ${itemHeight} ${
         isSelected
           ? "bg-cyan-800 scale-[1.2]"
           : "hover:scale-[1.2]"

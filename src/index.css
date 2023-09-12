@@ -36,7 +36,7 @@ html{
   /* PORTFOLIO ITEM CONTAINER */
 
   .portfolioItemContainer {
-    @apply flex flex-row flex-wrap w-full bg-cyan-700 consistentRounding justify-evenly;
+    @apply flex flex-row flex-wrap w-full p-4 bg-cyan-700 consistentRounding justify-evenly;
   }
 
   /* PORTFOLIO ITEM STYLES */
