@@ -1,6 +1,9 @@
 import React from "react";
-import { useForm } from "react-hook-form";
-import { TextField, Button } from "@mui/material";
+import PhoneIcon from "@mui/icons-material/Phone";
+import EmailIcon from "@mui/icons-material/Email";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { Phone } from "@mui/icons-material";
 
 const Container = ({ children }) => {
   return (
@@ -11,85 +14,24 @@ const Container = ({ children }) => {
 };
 
 export default function Contact() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-
-  const onSubmit = (data) => {
-    window.open(
-      `mailto:
-      ${data.email}
-      ?subject=Portfolio Contact Form Submission
-      &body=${data.message}
-      `
-    );
-    
-  };
-
   return (
     <div className="text-white">
-      <div className="text-4xl ml-4 font-bold">Contact</div>
+      <div className="text-4xl ml-4 font-bold">About me</div>
+
       <Container>
-        <form
-          className="flex flex-col gap-4 w-full"
-          onSubmit={handleSubmit(onSubmit)}
-        >
-          <TextField
-            {...register("name", { required: "Name is required" })}
-            label="Name"
-            variant="outlined"
-            fullWidth
-            color="white"
-            sx={{ "& .MuiOutlinedInput-notchedOutline": { border: "1px solid white" },
-              "& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline": { border: "1px solid white" },
-              "& .MuiOutlinedInput-input": { color: "white" },
-              "& .MuiInputLabel-root": { color: "white" },
-              "& .MuiInputLabel-shrink": { color: "white" },
-          }}
-          />
-          {errors.name && <span>{errors.name.message}</span>}
-
-          <TextField
-            {...register("email", {
-              required: "Email is required",
-              pattern: {
-                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                message: "Invalid email address",
-              },
-            })}
-            label="Email"
-            variant="outlined"
-            fullWidth
-            color="white"
-          />
-          {errors.email && <span>{errors.email.message}</span>}
-
-          <TextField
-            {...register("message", { required: "Message is required" })}
-            label="Message"
-            variant="outlined"
-            fullWidth
-            multiline
-            rows={4}
-            color="white"
-          />
-          {errors.message && <span>{errors.message.message}</span>}
-
-          <Button
-            type="submit"
-            variant="contained"
-            color="cyan"
-            sx={{
-              width: "8rem",
-              alignSelf: "center",
-              fontWeight: "bold",
-            }}
-          >
-            Send
-          </Button>
-        </form>
+        <div>
+          <PhoneIcon /> (618) 623-1542
+        </div>
+        <div>
+          <EmailIcon /> tonyschneider3@gmail.com
+        </div>
+        <div>
+          <GitHubIcon /> AnthonySchneider2000
+        </div>
+        <div>
+          <LinkedInIcon /> Anthony Schneider
+        </div>
+        
       </Container>
     </div>
   );
