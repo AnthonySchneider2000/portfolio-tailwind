@@ -1,5 +1,4 @@
 export const sidebarWidth = "7rem";
-
 /////////////////////////////////////
 //PORTFOLIO ITEMS
 
@@ -260,7 +259,7 @@ export const portfolioItems = {
   AGSFlix: {
     title: "AGSFlix",
     description: "A Netflix clone, uses the oMDB API to search for movies and display them in a Netflix style layout.",
-    image: "https://i.imgur.com/0jxCm61.png",
+    image: "https://i.imgur.com/8w5cSUw.png",
     // technologies: [technologies.React, technologies.MaterialUI, technologies.Vercel],
     sectionCount: 2,
     sections: [
@@ -289,7 +288,7 @@ export const portfolioItems = {
   TrailTours: {
     title: "Trail Tours",
     description: "A website for a fictional company that offers guided tours of hiking trails.",
-    image: "https://i.imgur.com/wdzOzLZ.png",
+    image: "https://i.imgur.com/K8dRlmu.png",
     // technologies: [technologies.React, technologies.MaterialUI, technologies.Vercel],
     sectionCount: 2,
     sections: [
@@ -319,7 +318,7 @@ export const portfolioItems = {
   Playlist: {
     title: "Playlist",
     description: "A website that allows you to create and manage YouTube playlists.",
-    image: "https://i.imgur.com/ft0mpBk.png",
+    image: "https://i.imgur.com/GmKyAxR.png",
     // technologies: [technologies.NextJS, technologies.Vercel],
     sectionCount: 3,
     sections: [
@@ -357,7 +356,7 @@ export const portfolioItems = {
   Portfolio: {
     title: "Portfolio",
     description: "This website, a portfolio of my projects.",
-    image: "https://i.imgur.com/4amD8vo.png",
+    image: "https://i.imgur.com/MQn4AQi.png",
     // technologies: [technologies.React, technologies.MaterialUI, technologies.Vercel, technologies.TailwindCSS],
     sectionCount: 2,
     sections: [
