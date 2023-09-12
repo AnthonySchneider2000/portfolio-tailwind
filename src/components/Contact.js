@@ -18,21 +18,36 @@ export default function Contact() {
   } = useForm();
 
   const onSubmit = (data) => {
-    // Handle form submission here (e.g., send data to a server)
-    console.log(data);
+    window.open(
+      `mailto:
+      ${data.email}
+      ?subject=Portfolio Contact Form Submission
+      &body=${data.message}
+      `
+    );
+    
   };
 
   return (
     <div className="text-white">
       <div className="text-4xl ml-4 font-bold">Contact</div>
       <Container>
-        <form className="flex flex-col gap-4 w-full" onSubmit={handleSubmit(onSubmit)}>
+        <form
+          className="flex flex-col gap-4 w-full"
+          onSubmit={handleSubmit(onSubmit)}
+        >
           <TextField
             {...register("name", { required: "Name is required" })}
             label="Name"
             variant="outlined"
             fullWidth
             color="white"
+            sx={{ "& .MuiOutlinedInput-notchedOutline": { border: "1px solid white" },
+              "& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline": { border: "1px solid white" },
+              "& .MuiOutlinedInput-input": { color: "white" },
+              "& .MuiInputLabel-root": { color: "white" },
+              "& .MuiInputLabel-shrink": { color: "white" },
+          }}
           />
           {errors.name && <span>{errors.name.message}</span>}
 
@@ -62,8 +77,15 @@ export default function Contact() {
           />
           {errors.message && <span>{errors.message.message}</span>}
 
-          <Button type="submit" variant="contained" color="cyan"
-            sx={{width: "8rem", alignSelf: "center", fontWeight: "bold"}}
+          <Button
+            type="submit"
+            variant="contained"
+            color="cyan"
+            sx={{
+              width: "8rem",
+              alignSelf: "center",
+              fontWeight: "bold",
+            }}
           >
             Send
           </Button>
