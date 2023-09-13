@@ -21,7 +21,7 @@ const Link = ({ children, href }) => (
   </a>
 );
 
-const TechnologyIcon = ({ technology, index }) => {
+const TechnologyIcon = ({ technology }) => {
   const theme = useTheme();
   return (
     <Tooltip
@@ -38,7 +38,6 @@ const TechnologyIcon = ({ technology, index }) => {
       }}
     >
       <div
-        key={index}
         className={`m-2 p-2 w-24 h-24 rounded-md iconTransition hover:bg-cyan-800 hover:scale-110`}
       >
         {technology.icon}
@@ -85,7 +84,7 @@ const Sections = ({ project }) => {
       </div>
       <div className="flex flex-row flex-wrap justify-evenly shadow-md border-cyan-800 border-[2px] rounded-2xl">
         {technologies.map((technology, index) => {
-          return <TechnologyIcon technology={technology} index={index} />;
+          return <TechnologyIcon technology={technology} key={index}/>;
         })}
       </div>
     </>
