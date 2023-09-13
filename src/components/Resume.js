@@ -8,11 +8,14 @@ const Container = ({ children }) => {
   );
 };
 
+const Title = ({ children }) => {
+  return <div className="text-4xl ml-4 font-bold">{children}</div>;
+};
+
 export default function Resume() {
   return (
     <div className="text-white text-xl">
-      <div className="text-4xl ml-4 font-bold">Resume</div>
-
+      <Title>Resume</Title>
       <Container>
         <div className="text-2xl">Anthony Schneider</div>
         <div className="text-xl">Software Engineer</div>
