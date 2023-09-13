@@ -77,16 +77,16 @@ function Home() {
           portfolioRef={portfolioRef}
           contactRef={contactRef}
         />
-        <div className="min-h-screen">
+        <div className="">
           <div ref={aboutRef}></div>
           <AboutMe />
         </div>
-        <div className="min-h-screen">
+        <div className="mt-[100vh]">
           <div ref={portfolioRef}></div>
           <PortfolioItemContainer />
           <PortfolioDetailContainer />
         </div>
-        <div className="min-h-screen">
+        <div className="min-h-screen mt-[100vh]">
           <div ref={contactRef}></div>
           <Contact />
         </div>
