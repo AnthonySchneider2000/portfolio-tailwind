@@ -53,7 +53,7 @@ function Home() {
   const version = isMobile ? "mobile" : "desktop";
   const homeStyle = isMobile ? "mpageContainer" : "dpageContainer";
   const topOffset = isMobile ? 84 + 32 : 16; // 84 is the height of the mobile sidebar, 32 is a rem of padding on each side
-
+  const minH = isMobile ? "min-h-[calc(100vh-132px)]" : "min-h-[calc(100vh-32px)]";
   const aboutRef = useRef(null);
   const portfolioRef = useRef(null);
   const resumeRef = useRef(null);
@@ -89,7 +89,7 @@ function Home() {
           <PortfolioItemContainer />
           <PortfolioDetailContainer />
         </div>
-        <div className="min-h-screen mt-[100vh]">
+        <div className={`${minH} mt-[100vh]`}>
           <div ref={contactRef}></div>
           <Contact />
         </div>

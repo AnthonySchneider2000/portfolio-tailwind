@@ -70,9 +70,7 @@ const JobExperience = () => {
           );
         })}
       </div>
-      <div className="flex flex-col justify-center items-center gap-4 p-4 bg-cyan-800 consistentRounding w-full rounded-t-none
-      transform translate-y-4
-      ">
+      <div className="flex flex-col justify-center items-center gap-4 p-4 bg-cyan-800 consistentRounding w-full rounded-t-none transform translate-y-4">
         <SelectedJobExperience jobExperience={JobExperienceArray[curItem]} />
       </div>
     </>
