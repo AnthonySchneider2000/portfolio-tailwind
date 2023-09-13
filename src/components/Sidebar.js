@@ -1,6 +1,6 @@
 import React from "react";
 import AboutMeIcon from "@mui/icons-material/Person";
-import PortfolioIcon from '@mui/icons-material/Terminal';
+import PortfolioIcon from "@mui/icons-material/Terminal";
 import ResumeIcon from "@mui/icons-material/Article";
 import ContactIcon from "@mui/icons-material/Mail";
 import { Tooltip } from "@mui/material";
@@ -12,8 +12,17 @@ const sidebarItems = [
   { icon: <ContactIcon />, text: "Contact", link: "contact" },
 ];
 
-const SidebarItem = ({ sidebarVersion, icon, text, placement, scrollToSection, destinationRef, fontSize }) => {
-  const sidebarItemStyle = sidebarVersion === "mobile" ? "msidebarItem" : "dsidebarItem";
+const SidebarItem = ({
+  sidebarVersion,
+  icon,
+  text,
+  placement,
+  scrollToSection,
+  destinationRef,
+  fontSize,
+}) => {
+  const sidebarItemStyle =
+    sidebarVersion === "mobile" ? "msidebarItem" : "dsidebarItem";
   return (
     <Tooltip
       title={<div className="text-xl">{text}</div>}
@@ -27,15 +36,24 @@ const SidebarItem = ({ sidebarVersion, icon, text, placement, scrollToSection, d
         },
       }}
     >
-      <div className={sidebarItemStyle} onClick={() => scrollToSection(destinationRef)}>
+      <div
+        className={sidebarItemStyle}
+        onClick={() => scrollToSection(destinationRef)}
+      >
         {React.cloneElement(icon, { fontSize })}
       </div>
     </Tooltip>
   );
 };
 
-
-export default function Sidebar({ sidebarVersion, scrollToSection, aboutRef, portfolioRef, resumeRef, contactRef }) {
+export default function Sidebar({
+  sidebarVersion,
+  scrollToSection,
+  aboutRef,
+  portfolioRef,
+  resumeRef,
+  contactRef,
+}) {
   const sidebarStyle = sidebarVersion === "mobile" ? "msidebar" : "dsidebar";
   const placement = sidebarVersion === "mobile" ? "bottom" : "right";
 
@@ -45,7 +63,7 @@ export default function Sidebar({ sidebarVersion, scrollToSection, aboutRef, por
     resume: resumeRef,
     contact: contactRef,
   };
-  
+
   const fontSize = sidebarVersion === "mobile" ? "medium" : "large";
 
   return (

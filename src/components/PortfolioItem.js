@@ -27,15 +27,13 @@ export default function PortfolioItem({ title, description, image, link }) {
   return (
     <div
       className={`portfolioItem cursor-pointer ${itemHeight} ${
-        isSelected
-          ? "bg-cyan-800 scale-[1.2]"
-          : "hover:scale-[1.2]"
+        isSelected ? "bg-cyan-800 scale-[1.2]" : "hover:scale-[1.2]"
       }`}
       onClick={handleClick}
     >
       <Tooltip
         title={<div className="text-xl">{title}</div>}
-        placement="bottom" // Use the provided placement prop
+        placement="bottom"
         componentsProps={{
           tooltip: {
             sx: {

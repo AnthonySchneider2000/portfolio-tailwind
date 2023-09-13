@@ -27,6 +27,8 @@ const TechnologyIcon = ({ technology }) => {
     <Tooltip
       title={<div className="text-xl whitespace-pre-line">{`${technology.title}\n${technology.description}`}</div>}
       placement="bottom"
+      enterTouchDelay={0}
+      leaveTouchDelay={500000}
       componentsProps={{
         tooltip: {
           sx: {
