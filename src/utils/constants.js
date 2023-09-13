@@ -426,6 +426,7 @@ export const JobExperience = {
     responsibilities: [
       "Developed a website for a local business using React and Material UI",
       "Contributed to an existing codebase, adding new features and fixing bugs",
+      "Documented the codebase and wrote tests to ensure code quality"
     ],
   },
   target: {
@@ -449,6 +450,7 @@ export const JobExperience = {
     responsibilities: [
       "Provided excellent customer service to residents and guests",
       "Worked as a team to ensure the dining room was clean and ready for service",
+      "Assisted in the kitchen with food preparation and dishwashing",
     ],
   },
 };
