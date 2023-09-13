@@ -16,7 +16,7 @@ const Title = ({ children }) => (
 );
 
 const Link = ({ children, href }) => (
-  <a href={href} target="_blank" rel="noreferrer">
+  <a href={href} target="_blank" rel="noreferrer" className="truncate">
     {children}
   </a>
 );
