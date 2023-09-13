@@ -15,28 +15,30 @@ const LinkComponent = ({ children, href }) => {
 const Photo = () => {
   return (
     <div className="max-h-32 aspect-square rounded-full overflow-hidden bg-cyan-800">
-      <img src={MyPhoto} alt="Anthony Schneider"  />
+      <img src={MyPhoto} alt="Anthony Schneider" />
     </div>
   );
 };
 
-
 const Bio = () => {
   return (
-    <div className="text-xl flex-grow w-3/4">
-      My name is Anthony Schneider. I am a software engineer with a passion for
-      learning and creating. I have a B.S. in Computer Science from Southern
-      Illinois University Edwardsville and am ambitious for any work
-      opportunities in software development or information technology.
+    <div className="text-xl flex-grow w-full">
+      I am a software engineer with a passion for learning and creating. I have
+      a B.S. in Computer Science from Southern Illinois University Edwardsville
+      and am ambitious for any work opportunities in software development or
+      information technology.
     </div>
   );
 };
 
 const TopSection = () => {
-  // contains photo and bio, photo is in the right, bio is in the left with flex-grow
+  // contains photo and bio, evenly spaced horizontally
   return (
-    <div className="flex flex-row justify-center items-center gap-4">
-      <Bio />
+    <div className="w-full flex flex-row justify-center items-center gap-4">
+      <div className="flex flex-col justify-center items-center gap-4 font-bold">
+        <div className="text-3xl">Anthony Schneider</div>
+        <div className="text-2xl">Software Engineer</div>
+      </div>
       <Photo />
     </div>
   );
@@ -62,6 +64,7 @@ const Container = () => {
   return (
     <div className="w-full p-4 bg-cyan-700 consistentRounding flex flex-col justify-center items-center gap-4 pb-4 text-center">
       <TopSection />
+      <Bio />
       <Links />
     </div>
   );
