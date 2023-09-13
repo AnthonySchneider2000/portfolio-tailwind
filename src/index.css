@@ -3,7 +3,7 @@
 @tailwind utilities;
 :root {
   --sidebar-size: 7rem;
-  --sidebar-item-size: calc(var(--sidebar-size) * 0.8);
+  --sidebar-item-size: min( calc(var(--sidebar-size) * 0.8), 15vw);
   --page-padding: 1rem;
 }
 html{
@@ -101,6 +101,7 @@ html{
     @apply sidebar flex-row;
     width: calc(100vw - var(--page-padding) * 2);
     height: var(--sidebar-size);
+    max-height: calc( calc(100vw - var(--page-padding) * 2) / 4)
   }
 
   .mpageContainer {
@@ -108,6 +109,8 @@ html{
     padding-top: calc(var(--sidebar-size) + var(--page-padding) * 2);
   }
   .msidebarItem{
-    @apply sidebarItem;
+    @apply flex justify-center items-center consistentRounding iconBackground iconTextStyle iconTransition;
+    aspect-ratio: 1/1;
+    width: var(--sidebar-item-size);
   }
 }

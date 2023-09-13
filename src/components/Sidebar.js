@@ -3,10 +3,16 @@ import PortfolioIcon from "@mui/icons-material/Article";
 import MailIcon from "@mui/icons-material/Mail";
 import { Tooltip } from "@mui/material";
 
-const items = [
+const DesktopItems = [
   { icon: <AboutMeIcon fontSize="large" />, text: "About Me", link: "about" },
   { icon: <PortfolioIcon fontSize="large" />, text: "Portfolio", link: "portfolio" },
   { icon: <MailIcon fontSize="large" />, text: "Contact", link: "contact" },
+];
+
+const MobileItems = [
+  { icon: <AboutMeIcon fontSize="medium" />, text: "About Me", link: "about" },
+  { icon: <PortfolioIcon fontSize="medium" />, text: "Portfolio", link: "portfolio" },
+  { icon: <MailIcon fontSize="medium" />, text: "Contact", link: "contact" },
 ];
 
 const SidebarItem = ({ icon, text, link, placement, scrollToSection, destinationRef  }) => {
@@ -32,6 +38,8 @@ const SidebarItem = ({ icon, text, link, placement, scrollToSection, destination
 export default function Sidebar({ sidebarVersion, scrollToSection, aboutRef, portfolioRef, contactRef }) {
   const sidebarStyle = sidebarVersion === "mobile" ? "msidebar" : "dsidebar";
   const placement = sidebarVersion === "mobile" ? "bottom" : "right";
+  const items = sidebarVersion === "mobile" ? MobileItems : DesktopItems; //in case i want to shrink the fontSize of the icons on mobile
+  
   return (
     <div className={sidebarStyle}>
       {items.map((item, index) => (
