@@ -2,6 +2,8 @@ import { useStateContext } from "utils/StateContext";
 import { portfolioItems, AGSFlix } from "utils/constants";
 import { GitHub } from "@mui/icons-material";
 import { useState, useEffect } from "react";
+import { Tooltip } from "@mui/material";
+import { useTheme } from "@mui/material";
 
 let project = AGSFlix;
 
@@ -18,6 +20,32 @@ const Link = ({ children, href }) => (
     {children}
   </a>
 );
+
+const TechnologyIcon = ({ technology, index }) => {
+  const theme = useTheme();
+  return (
+    <Tooltip
+      title={<div className="text-xl whitespace-pre-line">{`${technology.title}\n${technology.description}`}</div>}
+      placement="bottom" // Use the provided placement prop
+      componentsProps={{
+        tooltip: {
+          sx: {
+            backgroundColor: theme.palette.cyan.dark,
+            padding: "0.5rem",
+            textAlign: "center",
+          },
+        },
+      }}
+    >
+      <div
+        key={index}
+        className={`m-2 p-2 w-24 h-24 rounded-md iconTransition hover:bg-cyan-800 hover:scale-110`}
+      >
+        {technology.icon}
+      </div>
+    </Tooltip>
+  );
+};
 
 const Sections = ({ project }) => {
   //each section is a tab
@@ -57,14 +85,7 @@ const Sections = ({ project }) => {
       </div>
       <div className="flex flex-row flex-wrap justify-evenly shadow-md border-cyan-800 border-[2px] rounded-2xl">
         {technologies.map((technology, index) => {
-          return (
-            <div
-              key={index}
-              className={`m-2 p-2 w-24 h-24 rounded-md iconTransition hover:bg-cyan-800 hover:scale-110`}
-            >
-              {technology.icon}
-            </div>
-          );
+          return <TechnologyIcon technology={technology} index={index} />;
         })}
       </div>
     </>

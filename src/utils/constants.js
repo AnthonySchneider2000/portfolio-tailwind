@@ -1,74 +1,73 @@
-import { Html5OriginalWordmark,
-    Css3OriginalWordmark,
-    JavascriptOriginal,
-    TypescriptOriginal,
-    ReactOriginalWordmark,
-    AngularjsOriginal,
-    MaterialuiOriginal,
-    NextjsOriginalWordmark,
-    NodejsOriginalWordmark,
-    TailwindcssOriginalWordmark,
-    DjangoPlain,
-    PythonOriginalWordmark,
-    MongodbOriginalWordmark,
-    MysqlOriginalWordmark,
-    SqliteOriginalWordmark,
-    GitOriginalWordmark,
-    GithubOriginalWordmark,
-    COriginal,
-    CplusplusOriginal,
-    JavaOriginalWordmark,
-    CsharpOriginal,
-    UnityOriginalWordmark,
-    RustPlain,
+import {
+  Html5OriginalWordmark,
+  Css3OriginalWordmark,
+  JavascriptOriginal,
+  TypescriptOriginal,
+  ReactOriginalWordmark,
+  AngularjsOriginal,
+  MaterialuiOriginal,
+  NextjsOriginalWordmark,
+  NodejsOriginalWordmark,
+  TailwindcssOriginalWordmark,
+  DjangoPlain,
+  PythonOriginalWordmark,
+  MongodbOriginalWordmark,
+  MysqlOriginalWordmark,
+  SqliteOriginalWordmark,
+  GitOriginalWordmark,
+  GithubOriginalWordmark,
+  COriginal,
+  CplusplusOriginal,
+  JavaOriginalWordmark,
+  CsharpOriginal,
+  UnityOriginalWordmark,
+  RustPlain,
+} from "devicons-react";
 
- } from "devicons-react";
-
- import VercelIcon from "components/VercelIcon";
+import VercelIcon from "components/VercelIcon";
 
 export const sidebarWidth = "7rem";
 /////////////////////////////////////
 //PORTFOLIO ITEMS
 
 export const types = {
-    Layout: {
-        title: "Layout",
-        categories: ["Frontend"],
-    },
-    Styling: {
-        title: "Styling",
-        categories: ["Frontend"],
-    },
-    Scripting: {
-        title: "Scripting",
-        categories: ["Frontend", "Backend"],
-    },
-    Frontend: {
-        title: "Frontend",
-        categories: ["Frontend"],
-    },
-    Backend: {
-        title: "Backend",
-        categories: ["Backend"],
-    },
-    Database: {
-        title: "Database",
-        categories: ["Backend"],
-    },
-    Deployment: {
-        title: "Deployment",
-        categories: ["Deployment"],
-    },
-    VersionControl: {
-        title: "Version Control",
-        categories: ["Version Control"],
-    },
-    GameEngine: {
-        title: "Game Engine",
-        categories: ["Game Engine"],
-    },
-}
-
+  Layout: {
+    title: "Layout",
+    categories: ["Frontend"],
+  },
+  Styling: {
+    title: "Styling",
+    categories: ["Frontend"],
+  },
+  Scripting: {
+    title: "Scripting",
+    categories: ["Frontend", "Backend"],
+  },
+  Frontend: {
+    title: "Frontend",
+    categories: ["Frontend"],
+  },
+  Backend: {
+    title: "Backend",
+    categories: ["Backend"],
+  },
+  Database: {
+    title: "Database",
+    categories: ["Backend"],
+  },
+  Deployment: {
+    title: "Deployment",
+    categories: ["Deployment"],
+  },
+  VersionControl: {
+    title: "Version Control",
+    categories: ["Version Control"],
+  },
+  GameEngine: {
+    title: "Game Engine",
+    categories: ["Game Engine"],
+  },
+};
 
 export const technologies = {
   HTML: {
@@ -101,7 +100,7 @@ export const technologies = {
   TypeScript: {
     title: "TypeScript",
     description:
-      "An open-source language which builds on JavaScript, one of the world’s most used tools, by adding static type definitions.",
+      "An open-source language which builds on JavaScript, one of the world's most used tools, by adding static type definitions.",
     icon: <TypescriptOriginal size="100%" />,
     types: types.Scripting,
     link: "https://www.typescriptlang.org/",
@@ -109,7 +108,7 @@ export const technologies = {
   },
   React: {
     title: "React",
-    description: "A JavaScript library for building user interfaces",
+    description: "A JavaScript library for building user interfaces.",
     icon: <ReactOriginalWordmark size="100%" />,
     types: [types.Layout, types.Scripting],
     link: "https://reactjs.org/",
@@ -126,7 +125,7 @@ export const technologies = {
   },
   MaterialUI: {
     title: "Material UI",
-    description: "React components for faster and easier web development.",
+    description: "A React UI framework that follows Google's Material Design.",
     icon: <MaterialuiOriginal size="100%" />,
     types: [types.Styling],
     link: "https://material-ui.com/",
@@ -134,7 +133,8 @@ export const technologies = {
   },
   NextJS: {
     title: "NextJS",
-    description: "The React Framework for Production",
+    description: `Next.js is an open-source web development framework which provides 
+    React-based web applications with server-side rendering and static website generation.`,
     icon: <NextjsOriginalWordmark size="100%" />,
     types: [types.Scripting],
     link: "https://nextjs.org/",
@@ -286,58 +286,60 @@ export const technologies = {
 export const portfolioItems = {
   AGSFlix: {
     title: "AGSFlix",
-    description: "A Netflix clone, uses the oMDB API to search for movies and display them in a Netflix style layout.",
+    description:
+      "A Netflix clone, uses the oMDB API to search for movies and display them in a Netflix style layout.",
     image: "https://i.imgur.com/8w5cSUw.png",
     // technologies: [technologies.React, technologies.MaterialUI, technologies.Vercel],
     sectionCount: 2,
     sections: [
-        {
-            title: "Frontend",
-            technologies: [
-                technologies.React,
-                technologies.MaterialUI,
-                technologies.HTML,
-                technologies.CSS,
-                technologies.JavaScript,
-            ],
-        },
-        {
-            title: "DevOps",
-            technologies: [
-                technologies.Vercel,
-                technologies.Git,
-                technologies.GitHub,
-            ],
-        },
+      {
+        title: "Frontend",
+        technologies: [
+          technologies.React,
+          technologies.MaterialUI,
+          technologies.HTML,
+          technologies.CSS,
+          technologies.JavaScript,
+        ],
+      },
+      {
+        title: "DevOps",
+        technologies: [
+          technologies.Vercel,
+          technologies.Git,
+          technologies.GitHub,
+        ],
+      },
     ],
     link: "https://agsflix.vercel.app/",
     github: "https://github.com/AnthonySchneider2000/AGSFlix",
   },
   TrailTours: {
     title: "Trail Tours",
-    description: "A website for a fictional company that offers guided tours of hiking trails.",
+    description:
+      "A website for a fictional company that offers guided tours of hiking trails.",
     image: "https://i.imgur.com/K8dRlmu.png",
     // technologies: [technologies.React, technologies.MaterialUI, technologies.Vercel],
     sectionCount: 2,
     sections: [
-        {
-            title: "Frontend",
-            technologies: [
-                technologies.React,
-                technologies.MaterialUI,
-                technologies.HTML,
-                technologies.CSS,
-                technologies.JavaScript,
-            ],
-        },
-        {
-            title: "DevOps",
-            technologies: [
-                technologies.Vercel,
-                technologies.Git,
-                technologies.GitHub,
-            ],
-        },
+      {
+        title: "Frontend",
+        technologies: [
+          technologies.React,
+          technologies.MaterialUI,
+          technologies.HTML,
+          technologies.CSS,
+          technologies.JavaScript,
+        ],
+      },
+      {
+        title: "DevOps",
+        technologies: [
+          technologies.Vercel,
+          technologies.Git,
+          technologies.GitHub,
+        ],
+      },
     ],
     link: "https://trail-tours.vercel.app/",
     github:
@@ -345,37 +347,38 @@ export const portfolioItems = {
   },
   YouTubePlaylistManager: {
     title: "YouTube Playlist Manager",
-    description: "A website that allows you to create and manage YouTube playlists.",
+    description:
+      "A website that allows you to create and manage YouTube playlists.",
     image: "https://i.imgur.com/GmKyAxR.png",
     // technologies: [technologies.NextJS, technologies.Vercel],
     sectionCount: 3,
     sections: [
-        {
-            title: "Frontend",
-            technologies: [
-                technologies.NextJS,
-                technologies.React,
-                technologies.HTML,
-                technologies.CSS,
-                technologies.JavaScript,
-            ],
-        },
-        {
-            title: "Backend",
-            technologies: [
-                technologies.NextJS,
-                technologies.NodeJS,
-                technologies.MongoDB,
-            ],
-        },
-        {
-            title: "DevOps",
-            technologies: [
-                technologies.Vercel,
-                technologies.Git,
-                technologies.GitHub,
-            ],
-        },
+      {
+        title: "Frontend",
+        technologies: [
+          technologies.NextJS,
+          technologies.React,
+          technologies.HTML,
+          technologies.CSS,
+          technologies.JavaScript,
+        ],
+      },
+      {
+        title: "Backend",
+        technologies: [
+          technologies.NextJS,
+          technologies.NodeJS,
+          technologies.MongoDB,
+        ],
+      },
+      {
+        title: "DevOps",
+        technologies: [
+          technologies.Vercel,
+          technologies.Git,
+          technologies.GitHub,
+        ],
+      },
     ],
     link: "https://youtube-playlist-manager-ags.vercel.app/",
     github:
@@ -388,32 +391,30 @@ export const portfolioItems = {
     // technologies: [technologies.React, technologies.MaterialUI, technologies.Vercel, technologies.TailwindCSS],
     sectionCount: 2,
     sections: [
-        {
-            title: "Frontend",
-            technologies: [
-                technologies.React,
-                technologies.MaterialUI,
-                technologies.TailwindCSS,
-                technologies.HTML,
-                technologies.CSS,
-                technologies.JavaScript,
-            ],
-        },
-        {
-            title: "DevOps",
-            technologies: [
-                technologies.Vercel,
-                technologies.Git,
-                technologies.GitHub,
-            ],
-        },
+      {
+        title: "Frontend",
+        technologies: [
+          technologies.React,
+          technologies.MaterialUI,
+          technologies.TailwindCSS,
+          technologies.HTML,
+          technologies.CSS,
+          technologies.JavaScript,
+        ],
+      },
+      {
+        title: "DevOps",
+        technologies: [
+          technologies.Vercel,
+          technologies.Git,
+          technologies.GitHub,
+        ],
+      },
     ],
     link: "is.gd/AnthonySchneiderPortfolio",
     github: "https://github.com/AnthonySchneider2000/portfolio-tailwind",
   },
 };
-
-
 
 export const AGSFlix = portfolioItems.AGSFlix;
 export const TrailTours = portfolioItems.TrailTours;
