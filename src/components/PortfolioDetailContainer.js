@@ -20,7 +20,7 @@ const Link = ({ children, href }) => (
     href={href}
     target="_blank"
     rel="noreferrer"
-    className="font-bold truncate iconTransition consistentRounding iconBackground p-3"
+    className="font-bold truncate iconTransition consistentRounding iconBackground p-3 w-48"
   >
     {children}
   </a>
@@ -106,7 +106,7 @@ const ProjectIsSelected = () => {
     <div className="flex flex-col gap-4">
       <Title>{project.title}</Title>
       <div className="flex flex-row justify-center items-center gap-4">
-        <Link href={project.link}>Live Demo</Link>
+        <Link href={project.link}>Demo</Link>
         <Link href={project.github}>
           <GitHub /> Source Code
         </Link>
