@@ -75,7 +75,7 @@ export const technologies = {
     title: "HTML",
     description:
       "A markup language for creating web pages and web applications.",
-    icon: <Html5OriginalWordmark />,
+    icon: <Html5OriginalWordmark size="100%" />,
     types: types.Layout,
     link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
     //requires: [],
@@ -84,7 +84,7 @@ export const technologies = {
     title: "CSS",
     description:
       "A style sheet language used for describing the presentation of a document written in a markup language such as HTML.",
-    icon: <Css3OriginalWordmark />,
+    icon: <Css3OriginalWordmark size="100%" />,
     types: types.Styling,
     link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
     //requires: [],
@@ -93,7 +93,7 @@ export const technologies = {
     title: "JavaScript",
     description:
       "A programming language that conforms to the ECMAScript specification.",
-    icon: <JavascriptOriginal />,
+    icon: <JavascriptOriginal size="100%" />,
     types: types.Scripting,
     link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     //requires: [],
@@ -102,7 +102,7 @@ export const technologies = {
     title: "TypeScript",
     description:
       "An open-source language which builds on JavaScript, one of the world’s most used tools, by adding static type definitions.",
-    icon: <TypescriptOriginal />,
+    icon: <TypescriptOriginal size="100%" />,
     types: types.Scripting,
     link: "https://www.typescriptlang.org/",
     //requires: [this.JavaScript],
@@ -110,7 +110,7 @@ export const technologies = {
   React: {
     title: "React",
     description: "A JavaScript library for building user interfaces",
-    icon: <ReactOriginalWordmark />,
+    icon: <ReactOriginalWordmark size="100%" />,
     types: [types.Layout, types.Scripting],
     link: "https://reactjs.org/",
     //requires: [this.JavaScript, this.HTML, this.CSS],
@@ -119,7 +119,7 @@ export const technologies = {
     title: "Angular",
     description:
       "A TypeScript-based open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations.",
-    icon: <AngularjsOriginal />,
+    icon: <AngularjsOriginal size="100%" />,
     types: [types.Layout, types.Scripting],
     link: "https://angular.io/",
     //requires: [this.TypeScript, this.HTML, this.CSS],
@@ -127,7 +127,7 @@ export const technologies = {
   MaterialUI: {
     title: "Material UI",
     description: "React components for faster and easier web development.",
-    icon: <MaterialuiOriginal />,
+    icon: <MaterialuiOriginal size="100%" />,
     types: [types.Styling],
     link: "https://material-ui.com/",
     //requires: [this.React],
@@ -135,7 +135,7 @@ export const technologies = {
   NextJS: {
     title: "NextJS",
     description: "The React Framework for Production",
-    icon: <NextjsOriginalWordmark />,
+    icon: <NextjsOriginalWordmark size="100%" />,
     types: [types.Scripting],
     link: "https://nextjs.org/",
     //requires: [this.React, this.NodeJS],
@@ -144,7 +144,7 @@ export const technologies = {
     title: "NodeJS",
     description:
       "An open-source, cross-platform, back-end JavaScript runtime environment.",
-    icon: <NodejsOriginalWordmark />,
+    icon: <NodejsOriginalWordmark size="100%" />,
     types: [types.Scripting],
     link: "https://nodejs.org/en/",
     //requires: [],
@@ -153,7 +153,7 @@ export const technologies = {
     title: "Tailwind CSS",
     description:
       "A utility-first CSS framework for rapidly building custom designs.",
-    icon: <TailwindcssOriginalWordmark />,
+    icon: <TailwindcssOriginalWordmark size="100%" />,
     types: [types.Styling],
     link: "https://tailwindcss.com/",
     //requires: [this.CSS],
@@ -161,7 +161,7 @@ export const technologies = {
   Vercel: {
     title: "Vercel",
     description: "A cloud platform for static sites and Serverless Functions",
-    icon: <VercelIcon />,
+    icon: <VercelIcon size="100%" />,
     types: [types.Deployment],
     link: "https://vercel.com/",
     //requires: [],
@@ -170,7 +170,7 @@ export const technologies = {
     title: "Django",
     description:
       "A high-level Python Web framework that encourages rapid development and clean, pragmatic design.",
-    icon: <DjangoPlain />,
+    icon: <DjangoPlain size="100%" />,
     types: [types.Scripting],
     link: "https://www.djangoproject.com/",
     //requires: [this.Python],
@@ -179,7 +179,7 @@ export const technologies = {
     title: "Python",
     description:
       "An interpreted high-level general-purpose programming language.",
-    icon: <PythonOriginalWordmark />,
+    icon: <PythonOriginalWordmark size="100%" />,
     types: [types.Scripting],
     link: "https://www.python.org/",
     //requires: [],
@@ -188,7 +188,7 @@ export const technologies = {
     title: "MongoDB",
     description:
       "A source-available cross-platform document-oriented database program.",
-    icon: <MongodbOriginalWordmark />,
+    icon: <MongodbOriginalWordmark size="100%" />,
     types: [types.Database],
     link: "https://www.mongodb.com/",
     //requires: [],
@@ -196,7 +196,7 @@ export const technologies = {
   MySQL: {
     title: "MySQL",
     description: "An open-source relational database management system.",
-    icon: <MysqlOriginalWordmark />,
+    icon: <MysqlOriginalWordmark size="100%" />,
     types: [types.Database],
     link: "https://www.mysql.com/",
     //requires: [],
@@ -205,7 +205,7 @@ export const technologies = {
     title: "SQLite",
     description:
       "A relational database management system contained in a C library.",
-    icon: <SqliteOriginalWordmark />,
+    icon: <SqliteOriginalWordmark size="100%" />,
     types: [types.Database],
     link: "https://www.sqlite.org/index.html",
     //requires: [],
@@ -214,7 +214,7 @@ export const technologies = {
     title: "Git",
     description:
       "A distributed version-control system for tracking changes in source code during software development.",
-    icon: <GitOriginalWordmark />,
+    icon: <GitOriginalWordmark size="100%" />,
     types: types.VersionControl,
     link: "https://git-scm.com/",
     //requires: [],
@@ -223,7 +223,7 @@ export const technologies = {
     title: "GitHub",
     description:
       "A provider of Internet hosting for software development and version control using Git.",
-    icon: <GithubOriginalWordmark />,
+    icon: <GithubOriginalWordmark size="100%" />,
     types: types.VersionControl,
     link: "https://github.com/",
     //requires: [this.Git],
@@ -232,7 +232,7 @@ export const technologies = {
     title: "C",
     description:
       "A general-purpose, procedural computer programming language supporting structured programming.",
-    icon: <COriginal />,
+    icon: <COriginal size="100%" />,
     types: [types.Scripting],
     link: "https://en.wikipedia.org/wiki/C_(programming_language)",
     //requires: [],
@@ -241,7 +241,7 @@ export const technologies = {
     title: "C++",
     description:
       "A general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language.",
-    icon: <CplusplusOriginal />,
+    icon: <CplusplusOriginal size="100%" />,
     types: [types.Scripting],
     link: "https://en.wikipedia.org/wiki/C%2B%2B",
     //requires: [],
@@ -250,7 +250,7 @@ export const technologies = {
     title: "Java",
     description:
       "A class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.",
-    icon: <JavaOriginalWordmark />,
+    icon: <JavaOriginalWordmark size="100%" />,
     types: [types.Scripting],
     link: "https://www.java.com/en/",
     //requires: [],
@@ -259,7 +259,7 @@ export const technologies = {
     title: "C#",
     description:
       "A general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped, imperative, declarative, functional, generic, object-oriented, and component-oriented programming disciplines.",
-    icon: <CsharpOriginal />,
+    icon: <CsharpOriginal size="100%" />,
     types: [types.Scripting],
     link: "https://docs.microsoft.com/en-us/dotnet/csharp/",
     //requires: [],
@@ -268,7 +268,7 @@ export const technologies = {
     title: "Unity",
     description:
       "A cross-platform game engine developed by Unity Technologies, first announced and released in June 2005 at Apple Inc.'s Worldwide Developers Conference as a Mac OS X-exclusive game engine.",
-    icon: <UnityOriginalWordmark />,
+    icon: <UnityOriginalWordmark size="100%" />,
     types: [types.GameEngine],
     link: "https://unity.com/",
     //requires: ["C#"],
@@ -277,7 +277,7 @@ export const technologies = {
     title: "Rust",
     description:
       "A multi-paradigm programming language designed for performance and safety, especially safe concurrency.",
-    icon: <RustPlain />,
+    icon: <RustPlain size="100%" />,
     types: [types.Scripting],
     link: "https://www.rust-lang.org/",
     //requires: [],

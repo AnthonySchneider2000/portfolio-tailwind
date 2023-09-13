@@ -60,9 +60,9 @@ const Sections = ({ project }) => {
           return (
             <div
               key={index}
-              className={`m-2 p-2 rounded-md iconTransition iconBackground`}
+              className={`m-2 p-2 w-24 h-24 rounded-md iconTransition iconBackground hover:scale-110`}
             >
-              {technology.title}
+              {technology.icon}
             </div>
           );
         })}
