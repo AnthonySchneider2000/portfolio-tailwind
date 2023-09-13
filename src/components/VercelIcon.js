@@ -1,4 +1,4 @@
-import vercel from "assets/vercel-icon-dark.png";
+import vercel from "assets/vercel-icon-dark.svg";
 
 export default function VercelIcon(){
     return(
