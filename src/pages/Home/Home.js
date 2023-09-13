@@ -52,7 +52,7 @@ function Home() {
   // const CurrentHome = HomeVersions[isMobile ? "mobile" : "desktop"];
   const version = isMobile ? "mobile" : "desktop";
   const homeStyle = isMobile ? "mpageContainer" : "dpageContainer";
-  const topOffset = isMobile ? 112 + 32 : 16; // 112 is the height of the mobile sidebar, 32 is a rem of padding on each side
+  const topOffset = isMobile ? 84 + 32 : 16; // 84 is the height of the mobile sidebar, 32 is a rem of padding on each side
 
   const aboutRef = useRef(null);
   const portfolioRef = useRef(null);
