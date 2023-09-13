@@ -80,10 +80,10 @@ const Sections = ({ project }) => {
           return (
             <div
               key={index}
-              className={`flex flex-col justify-center items-center m-2 p-2 rounded-md iconTransition ${
+              className={`flex flex-col justify-center items-center ml-4 mr-4 p-2 border-[2px] border-cyan-900 rounded-md iconTransition ${
                 selectedSection === index
-                  ? "bg-slate-800 cursor-pointer"
-                  : "bg-slate-700 cursor-pointer hover:bg-slate-800"
+                  ? "bg-cyan-900 cursor-pointer scale-125"
+                  : "bg-cyan-800 cursor-pointer hover:bg-cyan-900 hover:scale-125"
               }`}
               onClick={() => handleSectionClick(index)}
             >

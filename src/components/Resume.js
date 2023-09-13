@@ -13,18 +13,6 @@ const Title = ({ children }) => {
   return <div className="text-4xl ml-4 font-bold">{children}</div>;
 };
 
-const JobExperienceItem = ({ jobExperience, index, setCurItem }) => {
-  return (
-    <div
-      className="flex flex-col justify-center items-center gap-4 cursor-pointer hover:scale-110 transition-all"
-      onClick={() => setCurItem(index)}
-    >
-      <div className="text-2xl font-bold">{jobExperience.company}</div>
-      <div className="text-xl">{jobExperience.position}</div>
-    </div>
-  );
-};
-
 const SelectedJobExperience = ({ jobExperience }) => {
   return (
     <>
@@ -52,6 +40,21 @@ const SelectedJobExperience = ({ jobExperience }) => {
   );
 };
 
+const JobExperienceItem = ({ jobExperience, index, curItem, setCurItem }) => {
+  const isSelected = index === curItem;
+  const iconBackground = isSelected ? "bg-cyan-800 scale-110" : "bg-cyan-700 hover:bg-cyan-800 border-[2px]";
+  return (
+    <div
+      className={`flex flex-col justify-center w-60 items-center gap-4 cursor-pointer hover:scale-110  border-cyan-800 transition-all
+      iconTransition ${iconBackground} consistentRounding m-4 p-4 text-center
+      `}
+      onClick={() => setCurItem(index)}
+    >
+      <div className="text-xl">{jobExperience.position}</div>
+    </div>
+  );
+};
+
 const JobExperience = () => {
   const [curItem, setCurItem] = React.useState(0);
 
@@ -64,6 +67,7 @@ const JobExperience = () => {
             <JobExperienceItem
               jobExperience={jobExperience}
               index={index}
+              curItem={curItem}
               setCurItem={setCurItem}
               key={index}
             />
