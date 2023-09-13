@@ -3,7 +3,7 @@ import { JobExperienceArray } from "utils/constants";
 
 const SectionContainer = ({ children }) => {
   return (
-    <div className="w-full p-4 bg-cyan-700 consistentRounding flex flex-col justify-center items-center gap-4 pb-4 text-center">
+    <div className="w-full pt-4 bg-cyan-700 consistentRounding flex flex-col justify-center items-center gap-4 pb-4 text-center">
       {children}
     </div>
   );
@@ -13,46 +13,67 @@ const Title = ({ children }) => {
   return <div className="text-4xl ml-4 font-bold">{children}</div>;
 };
 
-const JobExperienceItem = ({ jobExperience }) => {
+const JobExperienceItem = ({ jobExperience, index, setCurItem }) => {
   return (
-    <div className="w-[30vw] h-[35vw] iconTransition iconBackground consistentRounding p-4
-    grid grid-cols-1 gap-[1vw] hover:scale-[1.1]">
-      <div className="text-[2vw] leading-[2.3vw] lineh font-bold">{jobExperience.position}</div>
-      <div>
-        <div className="text-[1.7vw] leading-[2.0vw]">{jobExperience.employer}</div>
-        <div className="text-[1.5vw] leading-[1.8vw]">{jobExperience.location}</div>
-        {/* startDate - endDate */}
-        <div className="text-[1.5vw] leading-[1.8vw]">
-          {jobExperience.startDate} - {jobExperience.endDate}
-        </div>
-        <div className="text-[1.5vw] leading-[1.8vw]">
-          {jobExperience.responsibilities.map((responsibility, index) => {
-            return (
-              <div
-                key={index}
-                className="flex flex-row justify-start items-center m-[1vw] gap-2"
-              >
-                <div className="text-[1.5vw] leading-[1.8vw]">•</div>
-                <div className="text-[1.5vw] leading-[1.8vw]">{responsibility}</div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
+    <div
+      className="flex flex-col justify-center items-center gap-4 cursor-pointer hover:scale-110 transition-all"
+      onClick={() => setCurItem(index)}
+    >
+      <div className="text-2xl font-bold">{jobExperience.company}</div>
+      <div className="text-xl">{jobExperience.position}</div>
     </div>
   );
 };
 
+const SelectedJobExperience = ({ jobExperience }) => {
+  return (
+    <>
+      <div className="text-4xl font-bold">{jobExperience.position}</div>
+      <div className="text-3xl">{jobExperience.employer}</div>
+      <div className="text-2xl">{jobExperience.location}</div>
+      {/* startDate - endDate */}
+      <div className="text-xl">
+        {jobExperience.startDate} - {jobExperience.endDate}
+      </div>
+      <div className="text-xl">
+        {jobExperience.responsibilities.map((responsibility, index) => {
+          return (
+            <div
+              key={index}
+              className="flex flex-row justify-center items-center m-2 gap-2"
+            >
+              <div className="text-xl">•</div>
+              <div className="text-xl">{responsibility}</div>
+            </div>
+          );
+        })}
+      </div>
+    </>
+  );
+};
+
 const JobExperience = () => {
+  const [curItem, setCurItem] = React.useState(0);
+
   return (
     <>
       <div className="text-3xl font-bold">Job Experience</div>
       <div className="flex flex-row flex-wrap w-full justify-evenly content-evenly">
         {JobExperienceArray.map((jobExperience, index) => {
           return (
-            <JobExperienceItem jobExperience={jobExperience} key={index} />
+            <JobExperienceItem
+              jobExperience={jobExperience}
+              index={index}
+              setCurItem={setCurItem}
+              key={index}
+            />
           );
         })}
+      </div>
+      <div className="flex flex-col justify-center items-center gap-4 p-4 bg-cyan-800 consistentRounding w-full rounded-t-none
+      transform translate-y-4
+      ">
+        <SelectedJobExperience jobExperience={JobExperienceArray[curItem]} />
       </div>
     </>
   );
