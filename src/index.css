@@ -106,7 +106,7 @@ html{
 
   .mpageContainer {
     @apply pageContainer;
-    padding-top: calc(var(--sidebar-size) + var(--page-padding) * 2);
+    padding-top: calc(var(--sidebar-size) * 0.75 + var(--page-padding) * 2);
   }
   .msidebarItem{
     @apply flex justify-center items-center consistentRounding iconBackground iconTextStyle iconTransition;
