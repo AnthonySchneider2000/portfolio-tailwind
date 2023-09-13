@@ -11,6 +11,14 @@ const Container = ({ children }) => {
   );
 };
 
+const ContactItem = ({ children }) => {
+  return (
+    <div className="cursor-pointer hover:scale-110 transition-all">
+      {children}
+    </div>
+  );
+};
+
 export default function Contact() {
   return (
     <div className="text-white text-xl">
@@ -20,15 +28,15 @@ export default function Contact() {
         Thank you for visiting my portfolio. If you are interested in
         collaborating or have any inquiries, please feel free to get in touch
         through the following channels:
-        <div>
+        <ContactItem>
           <PhoneIcon /> (618) 623-1542
-        </div>
-        <div>
+        </ContactItem>
+        <ContactItem>
           <EmailIcon /> <a href="mailto:tonyschneider3@gmail.com">tonyschneider3@gmail.com</a>
-        </div>
-        <div>
+        </ContactItem>
+        <ContactItem>
           <LinkedInIcon /> <a href="https://www.linkedin.com/in/anthony-schneider-854ab6249/">LinkedIn</a>
-        </div>
+        </ContactItem>
       </Container>
     </div>
   );
