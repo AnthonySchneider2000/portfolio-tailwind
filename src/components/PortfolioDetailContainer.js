@@ -65,7 +65,7 @@ const Sections = ({ project }) => {
 
   return (
     <>
-      <div className="flex flex-row justify-center">
+      <div className="flex flex-row justify-center flex-wrap">
         {sections.map((section, index) => {
           return (
             <div
