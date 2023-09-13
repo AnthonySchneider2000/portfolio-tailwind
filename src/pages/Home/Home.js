@@ -1,7 +1,5 @@
 import { useRef } from "react";
 import { useMediaQuery } from "react-responsive";
-// import DesktopHome from "./DesktopHome";
-// import MobileHome from "./MobileHome";
 import Sidebar from "components/Sidebar";
 import PortfolioItemContainer from "components/PortfolioItemContainer";
 import PortfolioDetailContainer from "components/PortfolioDetailContainer";
@@ -10,10 +8,7 @@ import Contact from "components/Contact";
 import { createTheme } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 
-// const HomeVersions = {
-//   desktop: DesktopHome,
-//   mobile: MobileHome,
-// }
+
 
 let theme = createTheme({
   palette: {
