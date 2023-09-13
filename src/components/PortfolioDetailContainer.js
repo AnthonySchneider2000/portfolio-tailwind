@@ -105,7 +105,7 @@ const ProjectIsSelected = () => {
   return (
     <div className="flex flex-col gap-4">
       <Title>{project.title}</Title>
-      <div className="flex flex-row justify-center items-center gap-4">
+      <div className="flex flex-row justify-center items-center pl-4 pr-4 gap-4">
         <Link href={project.link}>Demo</Link>
         <Link href={project.github}>
           <GitHub /> Source Code
