@@ -5,6 +5,8 @@ import PortfolioItemContainer from "components/PortfolioItemContainer";
 import PortfolioDetailContainer from "components/PortfolioDetailContainer";
 import AboutMe from "components/AboutMe";
 import Contact from "components/Contact";
+import Resume from "components/Resume";
+
 import { createTheme } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 
@@ -54,6 +56,7 @@ function Home() {
 
   const aboutRef = useRef(null);
   const portfolioRef = useRef(null);
+  const resumeRef = useRef(null);
   const contactRef = useRef(null);
 
   const scrollToSection = (ref) => {
@@ -70,6 +73,7 @@ function Home() {
           scrollToSection={scrollToSection}
           aboutRef={aboutRef}
           portfolioRef={portfolioRef}
+          resumeRef={resumeRef}
           contactRef={contactRef}
         />
         <div className="">
@@ -80,6 +84,10 @@ function Home() {
           <div ref={portfolioRef}></div>
           <PortfolioItemContainer />
           <PortfolioDetailContainer />
+        </div>
+        <div className="mt-[100vh]">
+          <div ref={resumeRef}></div>
+          <Resume />
         </div>
         <div className="min-h-screen mt-[100vh]">
           <div ref={contactRef}></div>

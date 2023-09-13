@@ -1,21 +1,19 @@
+import React from "react";
 import AboutMeIcon from "@mui/icons-material/Person";
-import PortfolioIcon from "@mui/icons-material/Article";
-import MailIcon from "@mui/icons-material/Mail";
+import PortfolioIcon from '@mui/icons-material/Terminal';
+import ResumeIcon from "@mui/icons-material/Article";
+import ContactIcon from "@mui/icons-material/Mail";
 import { Tooltip } from "@mui/material";
 
-const DesktopItems = [
-  { icon: <AboutMeIcon fontSize="large" />, text: "About Me", link: "about" },
-  { icon: <PortfolioIcon fontSize="large" />, text: "Portfolio", link: "portfolio" },
-  { icon: <MailIcon fontSize="large" />, text: "Contact", link: "contact" },
+const sidebarItems = [
+  { icon: <AboutMeIcon />, text: "About Me", link: "about" },
+  { icon: <PortfolioIcon />, text: "Portfolio", link: "portfolio" },
+  { icon: <ResumeIcon />, text: "Resume", link: "resume" },
+  { icon: <ContactIcon />, text: "Contact", link: "contact" },
 ];
 
-const MobileItems = [
-  { icon: <AboutMeIcon fontSize="medium" />, text: "About Me", link: "about" },
-  { icon: <PortfolioIcon fontSize="medium" />, text: "Portfolio", link: "portfolio" },
-  { icon: <MailIcon fontSize="medium" />, text: "Contact", link: "contact" },
-];
-
-const SidebarItem = ({ icon, text, link, placement, scrollToSection, destinationRef  }) => {
+const SidebarItem = ({ sidebarVersion, icon, text, placement, scrollToSection, destinationRef, fontSize }) => {
+  const sidebarItemStyle = sidebarVersion === "mobile" ? "msidebarItem" : "dsidebarItem";
   return (
     <Tooltip
       title={<div className="text-xl">{text}</div>}
@@ -29,28 +27,39 @@ const SidebarItem = ({ icon, text, link, placement, scrollToSection, destination
         },
       }}
     >
-        <div className="sidebarItem" onClick={() => scrollToSection(destinationRef)}>
-          {icon}</div>
+      <div className={sidebarItemStyle} onClick={() => scrollToSection(destinationRef)}>
+        {React.cloneElement(icon, { fontSize })}
+      </div>
     </Tooltip>
   );
 };
 
-export default function Sidebar({ sidebarVersion, scrollToSection, aboutRef, portfolioRef, contactRef }) {
+
+export default function Sidebar({ sidebarVersion, scrollToSection, aboutRef, portfolioRef, resumeRef, contactRef }) {
   const sidebarStyle = sidebarVersion === "mobile" ? "msidebar" : "dsidebar";
   const placement = sidebarVersion === "mobile" ? "bottom" : "right";
-  const items = sidebarVersion === "mobile" ? MobileItems : DesktopItems; //in case i want to shrink the fontSize of the icons on mobile
+
+  const destinationRefs = {
+    about: aboutRef,
+    portfolio: portfolioRef,
+    resume: resumeRef,
+    contact: contactRef,
+  };
   
+  const fontSize = sidebarVersion === "mobile" ? "medium" : "large";
+
   return (
     <div className={sidebarStyle}>
-      {items.map((item, index) => (
+      {sidebarItems.map((item, index) => (
         <SidebarItem
-          key={index}
+          sidebarVersion={sidebarVersion}
           icon={item.icon}
+          key={index}
           text={item.text}
-          link={item.link}
           placement={placement}
           scrollToSection={scrollToSection}
-          destinationRef={item.link === "about" ? aboutRef : item.link === "portfolio" ? portfolioRef : contactRef}
+          destinationRef={destinationRefs[item.link]}
+          fontSize={fontSize}
         />
       ))}
     </div>
