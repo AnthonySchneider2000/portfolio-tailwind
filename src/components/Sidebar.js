@@ -7,8 +7,8 @@ import { Tooltip } from "@mui/material";
 
 const sidebarItems = [
   { icon: <AboutMeIcon />, text: "About Me", link: "about" },
-  { icon: <PortfolioIcon />, text: "Portfolio", link: "portfolio" },
   { icon: <ResumeIcon />, text: "Resume", link: "resume" },
+  { icon: <PortfolioIcon />, text: "Portfolio", link: "portfolio" },
   { icon: <ContactIcon />, text: "Contact", link: "contact" },
 ];
 

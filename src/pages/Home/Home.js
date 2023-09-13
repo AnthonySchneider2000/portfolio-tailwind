@@ -81,13 +81,13 @@ function Home() {
           <AboutMe />
         </div>
         <div className="mt-[100vh]">
+          <div ref={resumeRef}></div>
+          <Resume />
+        </div>
+        <div className="mt-[100vh]">
           <div ref={portfolioRef}></div>
           <PortfolioItemContainer />
           <PortfolioDetailContainer />
-        </div>
-        <div className="mt-[100vh]">
-          <div ref={resumeRef}></div>
-          <Resume />
         </div>
         <div className="min-h-screen mt-[100vh]">
           <div ref={contactRef}></div>
