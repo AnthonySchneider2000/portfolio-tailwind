@@ -2,6 +2,7 @@ import React from "react";
 import { useStateContext } from "utils/StateContext";
 import { useMediaQuery } from "react-responsive";
 import { Tooltip } from "@mui/material";
+import { useTheme } from "@mui/material";
 
 export default function PortfolioItem({ title, description, image, link }) {
   const { selectProject, selectedProjectName } = useStateContext();
@@ -16,6 +17,8 @@ export default function PortfolioItem({ title, description, image, link }) {
   const handleClick = (event) => {
     selectProject(title);
   };
+
+  const theme = useTheme();
 
   const isMobile = useMediaQuery({ query: "(max-aspect-ratio: 1/1)" });
   const itemHeight = isMobile ? "h-32" : "h-48";
@@ -36,7 +39,7 @@ export default function PortfolioItem({ title, description, image, link }) {
         componentsProps={{
           tooltip: {
             sx: {
-              backgroundColor: "rgb(17 24 39)", // bg-gray-900
+              backgroundColor: theme.palette.cyan.dark,
               padding: "0.5rem",
             },
           },

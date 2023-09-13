@@ -26,7 +26,7 @@ const TechnologyIcon = ({ technology, index }) => {
   return (
     <Tooltip
       title={<div className="text-xl whitespace-pre-line">{`${technology.title}\n${technology.description}`}</div>}
-      placement="bottom" // Use the provided placement prop
+      placement="bottom"
       componentsProps={{
         tooltip: {
           sx: {
