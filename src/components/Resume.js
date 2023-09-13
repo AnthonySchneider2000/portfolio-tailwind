@@ -41,7 +41,7 @@ const SelectedJobExperience = ({ jobExperience }) => {
   );
 };
 
-const JobExperienceItem = ({ jobExperience, index, curItem, setCurItem }) => {
+const JobExperienceItem = ({ jobExperience, index, curItem, setCurJob }) => {
   const isSelected = index === curItem;
   const iconBackground = isSelected
     ? "bg-cyan-800 scale-110"
@@ -51,7 +51,7 @@ const JobExperienceItem = ({ jobExperience, index, curItem, setCurItem }) => {
       className={`flex flex-col justify-center w-60 items-center gap-4 cursor-pointer hover:scale-110  border-cyan-800 transition-all
       iconTransition ${iconBackground} consistentRounding m-4 p-4 text-center
       `}
-      onClick={() => setCurItem(index)}
+      onClick={() => setCurJob(index)}
     >
       <div className="text-xl">{jobExperience.position}</div>
     </div>
@@ -59,21 +59,21 @@ const JobExperienceItem = ({ jobExperience, index, curItem, setCurItem }) => {
 };
 
 const JobExperience = () => {
-  const [curItem, setCurItem] = React.useState(0);
-  const [selectedItem, setSelectedItem] = React.useState(0);
+  const [curJob, setCurJob] = React.useState(0);
+  const [selectedButton, setSelectedButton] = React.useState(0);
   const [animationInProgress, setAnimationInProgress] = React.useState(false);
 
   const handleToggleExperience = (index) => {
-    if (index === selectedItem) {
-      setSelectedItem(index);
-      setCurItem(index);
+    if (index === selectedButton) {
+      setSelectedButton(index);
+      setCurJob(index);
     } else {
       // selecting another item closes the currently selected item
       // waits for the animation to finish before opening the new item
       setAnimationInProgress(true);
-      setSelectedItem(index);
+      setSelectedButton(index);
       setTimeout(() => {
-        setCurItem(index);
+        setCurJob(index);
         setAnimationInProgress(false);
       }, 600);
     };
@@ -88,8 +88,8 @@ const JobExperience = () => {
             <JobExperienceItem
               jobExperience={jobExperience}
               index={index}
-              curItem={selectedItem}
-              setCurItem={handleToggleExperience}
+              curJob={selectedButton}
+              setCurJob={handleToggleExperience}
               key={index}
             />
           );
@@ -99,7 +99,7 @@ const JobExperience = () => {
         <Collapse in={!animationInProgress} {...{ timeout: 600 }}>
           <div>
             <SelectedJobExperience
-              jobExperience={JobExperienceArray[curItem]}
+              jobExperience={JobExperienceArray[curJob]}
             />
           </div>
         </Collapse>
