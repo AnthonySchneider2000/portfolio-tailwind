@@ -1,5 +1,5 @@
-import resume from "materials/resume.pdf";
-import MyPhoto from "materials/MyPhoto.png";
+import resume from "assets/resume.pdf";
+import MyPhoto from "assets/MyPhoto.png";
 import AssignmentIcon from "@mui/icons-material/Assignment";
 import { GitHub } from "@mui/icons-material";
 import { LinkedIn } from "@mui/icons-material";
