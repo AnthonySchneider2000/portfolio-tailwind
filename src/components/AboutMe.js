@@ -46,7 +46,7 @@ const TopSection = () => {
 
 const Links = () => {
   return (
-    <div className="flex flex-row flex-wrap gap-4">
+    <div className="flex flex-row flex-wrap content-center justify-center gap-4">
       <LinkComponent href={resume}>
         <AssignmentIcon /> Resume
       </LinkComponent>
