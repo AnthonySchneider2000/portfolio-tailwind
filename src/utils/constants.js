@@ -91,7 +91,7 @@ export const technologies = {
   JavaScript: {
     title: "JavaScript",
     description:
-      "A programming language that conforms to the ECMAScript specification.",
+      "A programming language which allows you to implement complex features on web pages.",
     icon: <JavascriptOriginal size="100%" />,
     types: types.Scripting,
     link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
