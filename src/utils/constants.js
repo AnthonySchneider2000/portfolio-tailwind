@@ -416,6 +416,40 @@ export const portfolioItems = {
   },
 };
 
+export const JobExperience = {
+  freelance: {
+    employer: "Freelance",
+    position: "Software Developer",
+    startDate: "May 2021",
+    endDate: "Present",
+    responsibilities: [
+      "Developed a website for a local business using React and Material UI",
+      "Contributed to an existing codebase, adding new features and fixing bugs",
+    ],
+  },
+  target: {
+    employer: "Target Corporation",
+    position: "Retail Sales Specialist",
+    startDate: "July 2019",
+    endDate: "Present",
+    responsibilities: [
+      "Engaged with dozens of guests nightly, assessing their needs and providing solutions",
+      "Worked with management to prioritize tasks as efficiently as possible",
+      "Trained new team members on store policies and procedures",
+    ],
+  },
+  colonnade: {
+    employer: "The Colonnade Senior Living",
+    position: "Dining Services",
+    startDate: "June 2017",
+    endDate: "May 2019",
+    responsibilities: [
+      "Provided excellent customer service to residents and guests",
+      "Worked as a team to ensure the dining room was clean and ready for service",
+    ],
+  },
+};
+
 export const AGSFlix = portfolioItems.AGSFlix;
 export const TrailTours = portfolioItems.TrailTours;
 export const YouTubePlaylistManager = portfolioItems.YouTubePlaylistManager;
