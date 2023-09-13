@@ -83,7 +83,7 @@ html{
   /* SIDEBAR STYLES */
   .dsidebar {
     @apply sidebar flex-col;
-    height: calc(100% - var(--page-padding) * 2);
+    height: calc(100vh - var(--page-padding) * 2);
     width: var(--sidebar-size);
   }
   /* PAGE CONTAINER STYLES */
@@ -99,7 +99,7 @@ html{
   .msidebar {
     /* SIDEBAR ON TOP */
     @apply sidebar flex-row;
-    width: calc(100% - var(--page-padding) * 2);
+    width: calc(100vw - var(--page-padding) * 2);
     height: var(--sidebar-size);
   }
 
