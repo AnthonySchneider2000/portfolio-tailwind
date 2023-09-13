@@ -420,6 +420,7 @@ export const JobExperience = {
   freelance: {
     employer: "Freelance",
     position: "Software Developer",
+    location: "Remote",
     startDate: "May 2021",
     endDate: "Present",
     responsibilities: [
@@ -430,6 +431,7 @@ export const JobExperience = {
   target: {
     employer: "Target Corporation",
     position: "Retail Sales Specialist",
+    location: "Fairview Heights, IL",
     startDate: "July 2019",
     endDate: "Present",
     responsibilities: [
@@ -441,6 +443,7 @@ export const JobExperience = {
   colonnade: {
     employer: "The Colonnade Senior Living",
     position: "Dining Services",
+    location: "O'Fallon, IL",
     startDate: "June 2017",
     endDate: "May 2019",
     responsibilities: [
@@ -450,6 +453,54 @@ export const JobExperience = {
   },
 };
 
+export const JobExperienceArray = [
+  JobExperience.freelance,
+  JobExperience.target,
+  JobExperience.colonnade,
+];
+
+export const Education = {
+  siue: {
+    school: "Southern Illinois University Edwardsville",
+    degree: "Bachelor of Science in Computer Science",
+    location: "Edwardsville, IL",
+    startDate: "August 2018",
+    endDate: "May 2022",
+    gpa: "3.4",
+    courses: [],
+  },
+  oths: {
+    school: "O'Fallon Township High School",
+    degree: "High School Diploma",
+    location: "O'Fallon, IL",
+    startDate: "August 2014",
+    endDate: "May 2018",
+    gpa: "3.8",
+    courses: [],
+  },
+};
+
+export const Awards = {
+  honors: {
+    title: "SIUE Honors Program",
+    description:
+      "A program for students who are highly motivated and academically talented.",
+    date: "August 2018",
+  },
+  sealOfBiliteracy: {
+    title: "Illinois Seal of Biliteracy in Spanish",
+    description:
+      "Awarded to students who have studied and attained proficiency in two or more languages by high school graduation.",
+    date: "May 2018",
+  },
+};
+export const AwardsArray = [Awards.honors, Awards.sealOfBiliteracy];
+
+
+
+
+export const siue = Education.siue;
+export const oths = Education.oths;
 export const AGSFlix = portfolioItems.AGSFlix;
 export const TrailTours = portfolioItems.TrailTours;
 export const YouTubePlaylistManager = portfolioItems.YouTubePlaylistManager;
