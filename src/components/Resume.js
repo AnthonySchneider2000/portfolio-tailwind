@@ -1,5 +1,6 @@
 import React from "react";
 import { JobExperienceArray } from "utils/constants";
+import { Collapse } from "@mui/material";
 
 const SectionContainer = ({ children }) => {
   return (
@@ -16,7 +17,7 @@ const Title = ({ children }) => {
 const SelectedJobExperience = ({ jobExperience }) => {
   return (
     <>
-      <div className="text-4xl font-bold">{jobExperience.position}</div>
+      <div className="text-4xl font-bold mb-2">{jobExperience.position}</div>
       <div className="text-3xl">{jobExperience.employer}</div>
       <div className="text-2xl">{jobExperience.location}</div>
       {/* startDate - endDate */}
@@ -42,7 +43,9 @@ const SelectedJobExperience = ({ jobExperience }) => {
 
 const JobExperienceItem = ({ jobExperience, index, curItem, setCurItem }) => {
   const isSelected = index === curItem;
-  const iconBackground = isSelected ? "bg-cyan-800 scale-110" : "bg-cyan-700 hover:bg-cyan-800 border-[2px]";
+  const iconBackground = isSelected
+    ? "bg-cyan-800 scale-110"
+    : "bg-cyan-700 hover:bg-cyan-800 border-[2px]";
   return (
     <div
       className={`flex flex-col justify-center w-60 items-center gap-4 cursor-pointer hover:scale-110  border-cyan-800 transition-all
@@ -57,6 +60,19 @@ const JobExperienceItem = ({ jobExperience, index, curItem, setCurItem }) => {
 
 const JobExperience = () => {
   const [curItem, setCurItem] = React.useState(0);
+  const [selectedItem, setSelectedItem] = React.useState(0);
+  const [animationInProgress, setAnimationInProgress] = React.useState(false);
+
+  const handleToggleExperience = (index) => {
+    // selecting another item closes the currently selected item
+    // waits for the animation to finish before opening the new item
+    setAnimationInProgress(true);
+    setSelectedItem(index);
+    setTimeout(() => {
+      setCurItem(index);
+      setAnimationInProgress(false);
+    }, 600);
+  };
 
   return (
     <>
@@ -67,15 +83,21 @@ const JobExperience = () => {
             <JobExperienceItem
               jobExperience={jobExperience}
               index={index}
-              curItem={curItem}
-              setCurItem={setCurItem}
+              curItem={selectedItem}
+              setCurItem={handleToggleExperience}
               key={index}
             />
           );
         })}
       </div>
-      <div className="flex flex-col justify-center items-center gap-4 p-4 bg-cyan-800 consistentRounding w-full rounded-t-none transform translate-y-4">
-        <SelectedJobExperience jobExperience={JobExperienceArray[curItem]} />
+      <div className="flex flex-col jstify-center items-center gap-4 p-4 bg-cyan-800 consistentRounding w-full rounded-t-none transform translate-y-4">
+        <Collapse in={!animationInProgress} {...{ timeout: 600 }}>
+          <div>
+            <SelectedJobExperience
+              jobExperience={JobExperienceArray[curItem]}
+            />
+          </div>
+        </Collapse>
       </div>
     </>
   );
