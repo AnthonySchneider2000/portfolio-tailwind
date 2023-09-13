@@ -64,16 +64,21 @@ const JobExperience = () => {
   const [animationInProgress, setAnimationInProgress] = React.useState(false);
 
   const handleToggleExperience = (index) => {
-    // selecting another item closes the currently selected item
-    // waits for the animation to finish before opening the new item
-    setAnimationInProgress(true);
-    setSelectedItem(index);
-    setTimeout(() => {
+    if (index === selectedItem) {
+      setSelectedItem(index);
       setCurItem(index);
-      setAnimationInProgress(false);
-    }, 600);
+    } else {
+      // selecting another item closes the currently selected item
+      // waits for the animation to finish before opening the new item
+      setAnimationInProgress(true);
+      setSelectedItem(index);
+      setTimeout(() => {
+        setCurItem(index);
+        setAnimationInProgress(false);
+      }, 600);
+    };
   };
-
+    
   return (
     <>
       <div className="text-3xl font-bold">Job Experience</div>
