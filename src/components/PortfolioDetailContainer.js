@@ -47,7 +47,7 @@ export const TechnologyIcon = ({ technology }) => {
       }}
     >
       <div
-        className={`m-2 p-2 w-24 h-24 rounded-md iconTransition hover:bg-cyan-900 hover:scale-110`}
+        className={`m-2 p-2 w-24 h-24 rounded-md flex flex-col justify-center iconTransition hover:bg-cyan-900 hover:scale-110`}
       >
         {technology.icon}
       </div>

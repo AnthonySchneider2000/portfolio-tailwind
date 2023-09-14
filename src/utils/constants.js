@@ -22,6 +22,7 @@ import {
   CsharpOriginal,
   UnityOriginalWordmark,
   RustPlain,
+  PhpPlain,
 } from "devicons-react";
 
 import VercelIcon from "components/VercelIcon";
@@ -184,6 +185,15 @@ export const technologies = {
     link: "https://www.python.org/",
     //requires: [],
   },
+  PHP: {
+    title: "PHP",
+    description:
+      "A general-purpose scripting language especially suited to web development.",
+    icon: <PhpPlain size="100%" />,
+    types: [types.Scripting],
+    link: "https://www.php.net/",
+    //requires: [],
+  },
   MongoDB: {
     title: "MongoDB",
     description:
@@ -282,7 +292,42 @@ export const technologies = {
     link: "https://www.rust-lang.org/",
     //requires: [],
   },
+
+  //  ANYTHING BELOW THIS POINT IS NOT A TECHNOLOGY, BUT WILL BE USED IN THE SKILLS SECTION
+
+  agile: {
+    title: "Agile Methodology",
+    description:
+      "A set of values and principles that describe a way of working that helps teams deliver value to their customers faster and with fewer headaches.",
+    icon: <div className="text-5xl">A</div>,
+    types: [],
+    link: "https://www.atlassian.com/agile",
+    //requires: [],
+  },
+  waterfall: {
+    title: "Waterfall Methodology",
+    description:
+      "A linear project management approach, where stakeholder and customer requirements are gathered at the beginning of the project, and then a sequential project plan is created to accommodate those requirements.",
+    icon: <div className="text-5xl">W</div>,
+    types: [],
+    link: "",
+    //requires: [],
+  },
+  remote: {
+    title: "Remote Work",
+    description:
+      "A working style that allows professionals to work outside of a traditional office environment.",
+    icon: <div className="text-5xl">R</div>,
+    types: [],
+    link: "",
+    //requires: [],
+  },
+
+
+
+
 };
+
 
 export const TechnologiesArray = [
   technologies.HTML,
@@ -298,6 +343,7 @@ export const TechnologiesArray = [
   technologies.Vercel,
   technologies.Django,
   technologies.Python,
+  technologies.PHP,
   technologies.MongoDB,
   technologies.MySQL,
   technologies.SQLite,
@@ -529,7 +575,62 @@ export const Awards = {
 };
 export const AwardsArray = [Awards.honors, Awards.sealOfBiliteracy];
 
-
+export const SkillCategories = {
+  frontend: {
+    title: "Web Frontend",
+    skills: [
+      technologies.HTML,
+      technologies.CSS,
+      technologies.JavaScript,
+      technologies.TypeScript,
+      technologies.React,
+      technologies.Angular,
+      technologies.MaterialUI,
+      technologies.NextJS,
+      technologies.TailwindCSS,
+    ],
+  },
+  backend: {
+    title: "Web Backend",
+    skills: [
+      technologies.NodeJS,
+      technologies.NextJS,
+      technologies.Django,
+      technologies.Python,
+      technologies.PHP,
+      technologies.MongoDB,
+      technologies.MySQL,
+      technologies.SQLite,
+    ],
+  },
+  application: {
+    title: "Application Development",
+    skills: [
+      technologies.C,
+      technologies["C++"],
+      technologies.Java,
+      technologies["C#"],
+      technologies.Unity,
+      technologies.Rust,
+    ],
+  },
+  devops: {
+    title: "DevOps",
+    skills: [
+      technologies.Vercel,
+      technologies.Git,
+      technologies.GitHub,
+    ],
+  },
+  workflow: {
+    title: "Workflow",
+    skills: [
+      technologies.agile,
+      technologies.waterfall,
+      technologies.remote,
+    ],
+  },    
+};
 
 
 export const siue = Education.siue;
