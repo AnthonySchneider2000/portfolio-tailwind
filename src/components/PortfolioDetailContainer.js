@@ -26,7 +26,7 @@ const Link = ({ children, href }) => (
   </a>
 );
 
-const TechnologyIcon = ({ technology }) => {
+export const TechnologyIcon = ({ technology }) => {
   const theme = useTheme();
   return (
     <Tooltip

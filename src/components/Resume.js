@@ -1,6 +1,8 @@
 import React from "react";
 import { JobExperienceArray } from "utils/constants";
 import { Collapse } from "@mui/material";
+import { TechnologyIcon } from "./PortfolioDetailContainer";
+import { technologiesArray } from "utils/constants";
 
 const SectionContainer = ({ children }) => {
   return (
@@ -76,9 +78,9 @@ const JobExperience = () => {
         setCurJob(index);
         setAnimationInProgress(false);
       }, 600);
-    };
+    }
   };
-    
+
   return (
     <>
       <div className="text-3xl font-bold">Job Experience</div>
@@ -98,9 +100,7 @@ const JobExperience = () => {
       <div className="flex flex-col jstify-center items-center gap-4 p-4 bg-cyan-800 consistentRounding w-full rounded-t-none transform translate-y-4">
         <Collapse in={!animationInProgress} {...{ timeout: 600 }}>
           <div>
-            <SelectedJobExperience
-              jobExperience={JobExperienceArray[curJob]}
-            />
+            <SelectedJobExperience jobExperience={JobExperienceArray[curJob]} />
           </div>
         </Collapse>
       </div>
@@ -108,13 +108,31 @@ const JobExperience = () => {
   );
 };
 
+const Skills = () => {
+  return (
+    <div>
+      <div className="text-3xl font-bold">Skills</div>
+      <div className="flex flex-row flex-wrap justify-evenly bg-cyan-800 consistentRounding w-full rounded-t-none transform translate-y-4">
+        {technologiesArray.map((technology, index) => {
+          return <TechnologyIcon technology={technology} key={index} />;
+        })}
+      </div>
+    </div>
+  );
+};
+
 export default function Resume() {
   return (
     <div className="text-white text-xl">
       <Title>Resume</Title>
+      <div className="flex flex-col gap-4">
       <SectionContainer>
         <JobExperience />
       </SectionContainer>
+      <SectionContainer>
+        <Skills />
+      </SectionContainer>
+      </div>
     </div>
   );
 }

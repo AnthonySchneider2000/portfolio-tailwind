@@ -283,6 +283,35 @@ export const technologies = {
     //requires: [],
   },
 };
+
+export const technologiesArray = [
+  technologies.HTML,
+  technologies.CSS,
+  technologies.JavaScript,
+  technologies.TypeScript,
+  technologies.React,
+  technologies.Angular,
+  technologies.MaterialUI,
+  technologies.NextJS,
+  technologies.NodeJS,
+  technologies.TailwindCSS,
+  technologies.Vercel,
+  technologies.Django,
+  technologies.Python,
+  technologies.MongoDB,
+  technologies.MySQL,
+  technologies.SQLite,
+  technologies.Git,
+  technologies.GitHub,
+  technologies.C,
+  technologies["C++"],
+  technologies.Java,
+  technologies["C#"],
+  technologies.Unity,
+  technologies.Rust,
+];
+
+
 export const portfolioItems = {
   AGSFlix: {
     title: "AGSFlix",
