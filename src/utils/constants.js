@@ -632,6 +632,15 @@ export const SkillCategories = {
   },    
 };
 
+export const SkillCategoriesArray = [
+  SkillCategories.frontend,
+  SkillCategories.backend,
+  SkillCategories.application,
+  SkillCategories.devops,
+  SkillCategories.workflow,
+];
+
+
 
 export const siue = Education.siue;
 export const oths = Education.oths;
