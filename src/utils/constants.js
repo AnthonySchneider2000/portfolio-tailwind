@@ -284,7 +284,7 @@ export const technologies = {
   },
 };
 
-export const technologiesArray = [
+export const TechnologiesArray = [
   technologies.HTML,
   technologies.CSS,
   technologies.JavaScript,
