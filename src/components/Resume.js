@@ -3,6 +3,7 @@ import { JobExperienceArray } from "utils/constants";
 import { Collapse } from "@mui/material";
 import { TechnologyIcon } from "./PortfolioDetailContainer";
 import { technologiesArray } from "utils/constants";
+import { EducationArray } from "utils/constants";
 
 const SectionContainer = ({ children }) => {
   return (
@@ -121,17 +122,57 @@ const Skills = () => {
   );
 };
 
+const Education = () => {
+  return (
+    <div className="w-full">
+      <div className="text-3xl font-bold">Education</div>
+      <div className="flex flex-row flex-wrap justify-evenly p-4 bg-cyan-800 consistentRounding w-full rounded-t-none transform translate-y-4">
+        {EducationArray.map((education, index) => {
+          return (
+            // siue: {
+            //   school: "Southern Illinois University Edwardsville",
+            //   degree: "Bachelor of Science in Computer Science",
+            //   location: "Edwardsville, IL",
+            //   startDate: "August 2018",
+            //   endDate: "May 2022",
+            //   gpa: "3.4",
+            //   courses: [],
+            // },
+            <div
+              key={index}
+              className="flex flex-col justify-start items-center w-72 m-4 bg-cyan-900 consistentRounding iconTransition cursor-pointer hover:scale-110"
+            >
+              <div className="text-2xl w-full bg-cyan-950 p-2 consistentRounding rounded-b-none flex flex-col justify-center">{education.school}</div>
+              <div className="flex flex-col justify-end items-center gap-2 p-2">
+                <div className="text-xl h-14 flex flex-col justify-center">{education.degree}</div>
+                <div className="text-lg">{education.location}</div>
+                <div className="text-lg">
+                  {education.startDate} - {education.endDate}
+                </div>
+                <div className="text-lg">GPA: {education.gpa}</div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
 export default function Resume() {
   return (
     <div className="text-white text-xl">
       <Title>Resume</Title>
       <div className="flex flex-col gap-4">
-      <SectionContainer>
-        <JobExperience />
-      </SectionContainer>
-      <SectionContainer>
-        <Skills />
-      </SectionContainer>
+        <SectionContainer>
+          <JobExperience />
+        </SectionContainer>
+        <SectionContainer>
+          <Education />
+        </SectionContainer>
+        <SectionContainer>
+          <Skills />
+        </SectionContainer>
       </div>
     </div>
   );

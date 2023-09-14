@@ -511,6 +511,8 @@ export const Education = {
   },
 };
 
+export const EducationArray = [Education.siue, Education.oths];
+
 export const Awards = {
   honors: {
     title: "SIUE Honors Program",
