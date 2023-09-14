@@ -9,6 +9,7 @@ import {
   NextjsOriginalWordmark,
   NodejsOriginalWordmark,
   TailwindcssOriginalWordmark,
+  SassOriginal,
   DjangoPlain,
   PythonOriginalWordmark,
   MongodbOriginalWordmark,
@@ -157,6 +158,15 @@ export const technologies = {
     icon: <TailwindcssOriginalWordmark size="100%" />,
     types: [types.Styling],
     link: "https://tailwindcss.com/",
+    //requires: [this.CSS],
+  },
+  Sass: {
+    title: "Sass",
+    description:
+      "A preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets.",
+    icon: <SassOriginal size="100%" />,
+    types: [types.Styling],
+    link: "https://sass-lang.com/",
     //requires: [this.CSS],
   },
   Vercel: {
@@ -584,10 +594,11 @@ export const SkillCategories = {
       technologies.JavaScript,
       technologies.TypeScript,
       technologies.React,
+      technologies.NextJS,
       technologies.Angular,
       technologies.MaterialUI,
-      technologies.NextJS,
       technologies.TailwindCSS,
+      technologies.Sass,
     ],
   },
   backend: {
