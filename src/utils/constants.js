@@ -287,7 +287,7 @@ export const technologies = {
   Unity: {
     title: "Unity",
     description:
-      "A cross-platform game engine developed by Unity Technologies, first announced and released in June 2005 at Apple Inc.'s Worldwide Developers Conference as a Mac OS X-exclusive game engine.",
+      "A cross-platform game engine developed by Unity Technologies which is primarily used to develop both three-dimensional and two-dimensional video games and simulations for computers, consoles, and mobile devices.",
     icon: <UnityOriginalWordmark size="100%" />,
     types: [types.GameEngine],
     link: "https://unity.com/",
