@@ -619,8 +619,8 @@ export const SkillCategories = {
     skills: [
       technologies.C,
       technologies["C++"],
-      technologies.Java,
       technologies["C#"],
+      technologies.Java,
       technologies.Unity,
       technologies.Python,
       technologies.Rust,
