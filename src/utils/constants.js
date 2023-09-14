@@ -505,6 +505,24 @@ export const portfolioItems = {
     link: "https://i.imgur.com/hqSJ4Fj.png",
     github: "https://github.com/AnthonySchneider2000/agsupplements",
   },
+  MarkdownConverter: {
+    title: "Markdown Converter",
+    description:
+    "A Rust GUI application that converts Markdown input to HTML output.",
+    image: "https://i.imgur.com/ieYdw5S.png",
+    // technologies: [technologies.Rust],
+    sectionCount: 1,
+    sections: [
+      {
+        title: "Application",
+        technologies: [
+          technologies.Rust,
+        ],
+      },
+    ],
+    link: "https://i.imgur.com/zNReR2o.png",
+    github: "https://github.com/AnthonySchneider2000/markdown-editor-rust",
+  },
   Portfolio: {
     title: "Portfolio",
     description: "This website, a portfolio of my projects.",
