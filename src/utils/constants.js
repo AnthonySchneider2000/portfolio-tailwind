@@ -5,6 +5,7 @@ import {
   TypescriptOriginal,
   ReactOriginalWordmark,
   AngularjsOriginal,
+  AngularmaterialOriginal,
   MaterialuiOriginal,
   NextjsOriginalWordmark,
   NodejsOriginalWordmark,
@@ -116,15 +117,6 @@ export const technologies = {
     link: "https://reactjs.org/",
     //requires: [this.JavaScript, this.HTML, this.CSS],
   },
-  Angular: {
-    title: "Angular",
-    description:
-      "A TypeScript-based open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations.",
-    icon: <AngularjsOriginal size="100%" />,
-    types: [types.Layout, types.Scripting],
-    link: "https://angular.io/",
-    //requires: [this.TypeScript, this.HTML, this.CSS],
-  },
   MaterialUI: {
     title: "Material UI",
     description: "A React UI framework that follows Google's Material Design.",
@@ -151,6 +143,25 @@ export const technologies = {
     link: "https://nodejs.org/en/",
     //requires: [],
   },
+  Angular: {
+    title: "Angular",
+    description:
+      "A TypeScript-based open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations.",
+    icon: <AngularjsOriginal size="100%" />,
+    types: [types.Layout, types.Scripting],
+    link: "https://angular.io/",
+    //requires: [this.TypeScript, this.HTML, this.CSS],
+  },
+  AngularMaterial: {
+    title: "Angular Material",
+    description:
+      "A UI component library for Angular developers. Angular Material components help in constructing attractive, consistent, and functional web pages and web applications while adhering to modern web design principles like browser portability, device independence, and graceful degradation.",
+    icon: <AngularmaterialOriginal size="100%" />,
+    types: [types.Styling],
+    link: "https://material.angular.io/",
+    //requires: [this.Angular],
+  },
+
   TailwindCSS: {
     title: "Tailwind CSS",
     description:
@@ -336,6 +347,7 @@ export const technologies = {
 
 
 
+
 };
 
 
@@ -481,6 +493,7 @@ export const portfolioItems = {
         title: "Frontend",
         technologies: [
           technologies.Angular,
+          technologies.AngularMaterial,
           technologies.HTML,
           technologies.CSS,
           technologies.JavaScript,
@@ -649,8 +662,9 @@ export const SkillCategories = {
       technologies.TypeScript,
       technologies.React,
       technologies.NextJS,
-      technologies.Angular,
       technologies.MaterialUI,
+      technologies.Angular,
+      technologies.AngularMaterial,
       technologies.TailwindCSS,
       technologies.Sass,
     ],
