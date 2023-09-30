@@ -495,7 +495,7 @@ export const portfolioItems = {
   AGSupplements: {
     title: "AGSupplements",
     description:
-      "A variant of pcpartpicker.com, but for supplements. Allows users to create supplement stacks and compare prices from different retailers.",
+      "A variant of pcpartpicker.com, but for supplements and food products. Has a powerful data table that allows you to filter and sort products.",
     image: "https://i.imgur.com/1lVUsCy.png",
     // technologies: [technologies.Django, technologies.Angular, technologies.MySQL],
     sectionCount: 3,
@@ -505,6 +505,7 @@ export const portfolioItems = {
         technologies: [
           technologies.Angular,
           technologies.AngularMaterial,
+          technologies.TailwindCSS,
           technologies.HTML,
           technologies.CSS,
           technologies.JavaScript,
@@ -526,7 +527,7 @@ export const portfolioItems = {
         ],
       },
     ],
-    link: "https://i.imgur.com/hqSJ4Fj.png",
+    link: "https://www.youtube.com/watch?v=kDdmkBIMOy0",
     github: "https://github.com/AnthonySchneider2000/agsupplements",
   },
   MarkdownConverter: {
