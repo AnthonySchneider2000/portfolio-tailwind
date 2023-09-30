@@ -396,7 +396,7 @@ export const portfolioItems = {
     title: "AGSFlix",
     description:
       "A Netflix clone, uses the oMDB API to search for movies and display them in a Netflix style layout.",
-    image: "https://i.imgur.com/8w5cSUw.png",
+    image: "https://i.imgur.com/WW551T9.png",
     // technologies: [technologies.React, technologies.MaterialUI, technologies.Vercel],
     sectionCount: 2,
     sections: [
@@ -546,6 +546,27 @@ export const portfolioItems = {
     ],
     link: "https://i.imgur.com/zNReR2o.png",
     github: "https://github.com/AnthonySchneider2000/markdown-editor-rust",
+  },
+  ChessWebApp: {
+    title: "Chess Web App",
+    description:
+    "A simple web application created with Svelte with a functioning chess board.",
+    image: "https://i.imgur.com/qTia0zJ.png",
+    // technologies: [technologies.Svelte],
+    sectionCount: 1,
+    sections: [
+      {
+        title: "Frontend",
+        technologies: [
+          technologies.Svelte,
+          technologies.HTML,
+          technologies.CSS,
+          technologies.JavaScript,
+        ],
+      },
+    ],
+    link: "https://i.imgur.com/bTk1Fuc.png",
+    github: "https://github.com/AnthonySchneider2000/Chess-Web-App",
   },
   Portfolio: {
     title: "Portfolio",
