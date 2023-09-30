@@ -565,7 +565,7 @@ export const portfolioItems = {
         ],
       },
     ],
-    link: "https://i.imgur.com/bTk1Fuc.png",
+    link: "https://chess-web-app-ags.vercel.app/",
     github: "https://github.com/AnthonySchneider2000/Chess-Web-App",
   },
   Portfolio: {
