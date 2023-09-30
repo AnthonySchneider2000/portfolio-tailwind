@@ -6,6 +6,7 @@ import {
   ReactOriginalWordmark,
   AngularjsOriginal,
   AngularmaterialOriginal,
+  SvelteOriginalWordmark,
   MaterialuiOriginal,
   NextjsOriginalWordmark,
   NodejsOriginalWordmark,
@@ -160,6 +161,16 @@ export const technologies = {
     types: [types.Styling],
     link: "https://material.angular.io/",
     //requires: [this.Angular],
+  },
+
+  Svelte: {
+    title: "Svelte",
+    description:
+      "A free and open-source front end compiler that converts TypeScript, JavaScript, and CoffeeScript code into JavaScript code.",
+    icon: <SvelteOriginalWordmark size="100%" />,
+    types: [types.Scripting],
+    link: "https://svelte.dev/",
+    //requires: [],
   },
 
   TailwindCSS: {
@@ -665,6 +676,7 @@ export const SkillCategories = {
       technologies.MaterialUI,
       technologies.Angular,
       technologies.AngularMaterial,
+      technologies.Svelte,
       technologies.TailwindCSS,
       technologies.Sass,
     ],
