@@ -564,6 +564,14 @@ export const portfolioItems = {
           technologies.JavaScript,
         ],
       },
+      {
+        title: "DevOps",
+        technologies: [
+          technologies.Vercel,
+          technologies.Git,
+          technologies.GitHub,
+        ],
+      }
     ],
     link: "https://chess-web-app-ags.vercel.app/",
     github: "https://github.com/AnthonySchneider2000/Chess-Web-App",
