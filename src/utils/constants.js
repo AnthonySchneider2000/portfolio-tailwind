@@ -617,9 +617,9 @@ export const JobExperience = {
     startDate: "May 2021",
     endDate: "Present",
     responsibilities: [
-      "Developed a website for a local business using React and Material UI",
+      "Developed a system for automating invoice generation using Google Forms and Google Sheets",
       "Contributed to an existing codebase, adding new features and fixing bugs",
-      "Documented the codebase and wrote tests to ensure code quality"
+      "Performed data analytics and improved product usability"
     ],
   },
   target: {
