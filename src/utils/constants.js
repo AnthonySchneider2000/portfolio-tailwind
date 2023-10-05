@@ -534,7 +534,7 @@ export const portfolioItems = {
     title: "Markdown Converter",
     description:
     "A Rust GUI application that converts Markdown input to HTML output.",
-    image: "https://i.imgur.com/ycvwaH8.png",
+    image: "https://i.imgur.com/ESwfpUu.png",
     // technologies: [technologies.Rust],
     sectionCount: 1,
     sections: [
