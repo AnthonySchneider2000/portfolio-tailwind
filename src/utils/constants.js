@@ -748,6 +748,7 @@ export const SkillCategories = {
       technologies.CSS,
       technologies.JavaScript,
       technologies.TypeScript,
+      technologies.Wasm,
       technologies.React,
       technologies.NextJS,
       technologies.MaterialUI,
