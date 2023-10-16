@@ -26,6 +26,7 @@ import {
   UnityOriginalWordmark,
   RustPlain,
   PhpPlain,
+  WasmOriginal,
 } from "devicons-react";
 
 import VercelIcon from "components/VercelIcon";
@@ -324,6 +325,15 @@ export const technologies = {
     link: "https://www.rust-lang.org/",
     //requires: [],
   },
+  Wasm: {
+    title: "WebAssembly (Wasm)",
+    description:
+      "A binary instruction format for a stack-based virtual machine. Wasm is designed as a portable target for compilation of high-level languages like C/C++/Rust, enabling deployment on the web for client and server applications.",
+    icon: <WasmOriginal size="100%" />,
+    types: [types.Scripting],
+    link: "https://webassembly.org/",
+    //requires: [],
+  },
 
   //  ANYTHING BELOW THIS POINT IS NOT A TECHNOLOGY, BUT WILL BE USED IN THE SKILLS SECTION
 
@@ -392,6 +402,43 @@ export const TechnologiesArray = [
 
 
 export const portfolioItems = {
+  TrimVid: {
+    title: "TrimVid",
+    description:
+    "A web app which uses ffmpeg.wasm to trim videos, and locally can use youtube-dl to download videos from YouTube.",
+    image: "https://i.imgur.com/QPDIRw1.png",
+    sectionCount: 2,
+    sections: [
+      {
+        title: "Frontend",
+        technologies: [
+          technologies.Wasm,
+          technologies.React,
+          technologies.NextJS,
+          technologies.HTML,
+          technologies.CSS,
+          technologies.JavaScript,
+        ],
+      },
+      {
+        title: "Backend",
+        technologies: [
+          technologies.NextJS,
+          technologies.NodeJS,
+        ],
+      },
+      {
+        title: "DevOps",
+        technologies: [
+          technologies.Vercel,
+          technologies.Git,
+          technologies.GitHub,
+        ],
+      },
+    ],
+    link: "https://trimvid.vercel.app/",
+    github: "https://github.com/AnthonySchneider2000/ffmpeg-online",
+  },
   AGSFlix: {
     title: "AGSFlix",
     description:
@@ -576,7 +623,7 @@ export const portfolioItems = {
     ],
     link: "https://chess-web-app-ags.vercel.app/",
     github: "https://github.com/AnthonySchneider2000/Chess-Web-App",
-  },
+  },        
   Portfolio: {
     title: "Portfolio",
     description: "This website, a portfolio of my projects.",
