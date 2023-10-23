@@ -452,7 +452,7 @@ export const portfolioItems = {
   Raink:{
     title: "Raink",
     description: "A (WIP) web app that allows you to create and share lists of your favorite things.",
-    image: "https://i.imgur.com/jeOcQVB.png",
+    image: "https://i.imgur.com/XByHHxK.png",
     sectionCount: 2,
     sections: [
       {
