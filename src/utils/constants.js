@@ -487,6 +487,44 @@ export const portfolioItems = {
     link: "https://raink.vercel.app/",
     github: "https://github.com/AnthonySchneider2000/raink",
   },
+  AGSupplements: {
+    title: "AGSupplements",
+    description:
+      "A variant of pcpartpicker.com, but for supplements and food products. Has a powerful data table that allows you to filter and sort products.",
+    image: "https://i.imgur.com/1lVUsCy.png",
+    // technologies: [technologies.Django, technologies.Angular, technologies.MySQL],
+    sectionCount: 3,
+    sections: [
+      {
+        title: "Frontend",
+        technologies: [
+          technologies.Angular,
+          technologies.AngularMaterial,
+          technologies.TailwindCSS,
+          technologies.HTML,
+          technologies.CSS,
+          technologies.JavaScript,
+        ],
+      },
+      {
+        title: "Backend",
+        technologies: [
+          technologies.Django,
+          technologies.Python,
+          technologies.SQLite,
+        ],
+      },
+      {
+        title: "DevOps",
+        technologies: [
+          technologies.Git,
+          technologies.GitHub,
+        ],
+      },
+    ],
+    link: "https://www.youtube.com/watch?v=kDdmkBIMOy0",
+    github: "https://github.com/AnthonySchneider2000/agsupplements",
+  },
   AGSFlix: {
     title: "AGSFlix",
     description:
@@ -587,44 +625,6 @@ export const portfolioItems = {
     link: "https://youtube-playlist-manager-ags.vercel.app/",
     github:
       "https://github.com/AnthonySchneider2000/NextJS-YouTube-Playlist-Manager",
-  },
-  AGSupplements: {
-    title: "AGSupplements",
-    description:
-      "A variant of pcpartpicker.com, but for supplements and food products. Has a powerful data table that allows you to filter and sort products.",
-    image: "https://i.imgur.com/1lVUsCy.png",
-    // technologies: [technologies.Django, technologies.Angular, technologies.MySQL],
-    sectionCount: 3,
-    sections: [
-      {
-        title: "Frontend",
-        technologies: [
-          technologies.Angular,
-          technologies.AngularMaterial,
-          technologies.TailwindCSS,
-          technologies.HTML,
-          technologies.CSS,
-          technologies.JavaScript,
-        ],
-      },
-      {
-        title: "Backend",
-        technologies: [
-          technologies.Django,
-          technologies.Python,
-          technologies.SQLite,
-        ],
-      },
-      {
-        title: "DevOps",
-        technologies: [
-          technologies.Git,
-          technologies.GitHub,
-        ],
-      },
-    ],
-    link: "https://www.youtube.com/watch?v=kDdmkBIMOy0",
-    github: "https://github.com/AnthonySchneider2000/agsupplements",
   },
   MarkdownConverter: {
     title: "Markdown Converter",
