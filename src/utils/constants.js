@@ -15,6 +15,7 @@ import {
   DjangoPlain,
   PythonOriginalWordmark,
   MongodbOriginalWordmark,
+  MongooseOriginalWordmark,
   MysqlOriginalWordmark,
   SqliteOriginalWordmark,
   GitOriginalWordmark,
@@ -236,6 +237,15 @@ export const technologies = {
     link: "https://www.mongodb.com/",
     //requires: [],
   },
+  Mongoose: {
+    title: "Mongoose",
+    description:
+      "An Object Data Modeling (ODM) library for MongoDB and Node.js.",
+    icon: <MongooseOriginalWordmark size="100%" />,
+    types: [types.Database],
+    link: "https://mongoosejs.com/",
+    //requires: [this.MongoDB],
+  },
   MySQL: {
     title: "MySQL",
     description: "An open-source relational database management system.",
@@ -439,6 +449,44 @@ export const portfolioItems = {
     link: "https://trimvid.vercel.app/",
     github: "https://github.com/AnthonySchneider2000/ffmpeg-online",
   },
+  Raink:{
+    title: "Raink",
+    description: "A (WIP) web app that allows you to create and share lists of your favorite things.",
+    image: "https://i.imgur.com/wXtkKZF.png",
+    sectionCount: 2,
+    sections: [
+      {
+        title: "Frontend",
+        technologies: [
+          technologies.React,
+          technologies.NextJS,
+          technologies.TailwindCSS,
+          technologies.HTML,
+          technologies.CSS,
+          technologies.JavaScript,
+        ],
+      },
+      {
+        title: "Backend",
+        technologies: [
+          technologies.NextJS,
+          technologies.NodeJS,
+          technologies.MongoDB,
+          technologies.Mongoose,
+        ],
+      },
+      {
+        title: "DevOps",
+        technologies: [
+          technologies.Vercel,
+          technologies.Git,
+          technologies.GitHub,
+        ],
+      },
+    ],
+    link: "https://raink.vercel.app/",
+    github: "https://github.com/AnthonySchneider2000/raink",
+  },
   AGSFlix: {
     title: "AGSFlix",
     description:
@@ -524,6 +572,7 @@ export const portfolioItems = {
           technologies.NextJS,
           technologies.NodeJS,
           technologies.MongoDB,
+          technologies.Mongoose,
         ],
       },
       {
