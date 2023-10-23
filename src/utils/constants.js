@@ -416,7 +416,7 @@ export const portfolioItems = {
     title: "TrimVid",
     description:
     "A web app which uses ffmpeg.wasm to trim videos, and locally can use youtube-dl to download videos from YouTube.",
-    image: "https://i.imgur.com/QPDIRw1.png",
+    image: "https://i.imgur.com/XzISY4V.png",
     sectionCount: 2,
     sections: [
       {
@@ -452,7 +452,7 @@ export const portfolioItems = {
   Raink:{
     title: "Raink",
     description: "A (WIP) web app that allows you to create and share lists of your favorite things.",
-    image: "https://i.imgur.com/wXtkKZF.png",
+    image: "https://i.imgur.com/jeOcQVB.png",
     sectionCount: 2,
     sections: [
       {
@@ -529,7 +529,7 @@ export const portfolioItems = {
     title: "AGSFlix",
     description:
       "A Netflix clone, uses the oMDB API to search for movies and display them in a Netflix style layout.",
-    image: "https://i.imgur.com/WW551T9.png",
+    image: "https://i.imgur.com/k1lnnsq.png",
     // technologies: [technologies.React, technologies.MaterialUI, technologies.Vercel],
     sectionCount: 2,
     sections: [
